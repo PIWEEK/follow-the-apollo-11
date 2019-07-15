@@ -1,11 +1,9 @@
 <template>
   <div class="ar">
     <p>AR</p>
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
-          <a-box position='0 0.5 0' material='color: yellow;'></a-box>
-      </a-marker>
-      <a-entity camera></a-entity>
+    <a-scene arjs='sourceType: webcam;'>
+      <a-box position='0 0.5 0' material='opacity: 0.5; color: yellow;'></a-box>
+      <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
   </div>
 </template>
