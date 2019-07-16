@@ -11,7 +11,9 @@
       </a-assets>
 
       <a-marker-camera preset='hiro'>
-        <a-gltf-model src="#eagle" scale='0.2 0.2 0.2' position='0 0 0' rotation="-90 0 0"></a-gltf-model>
+        <a-entity rotation="-90 0 0" animation="property: rotation; to:-90 360 0; loop: true; dur: 10000">
+          <a-gltf-model src="#eagle" scale="0.2 0.2 0.2" position="0 0 0" ></a-gltf-model>
+        </a-entity>
       </a-marker-camera>
 
       <a-entity light="type: ambient; color: #ccc;"></a-entity>
