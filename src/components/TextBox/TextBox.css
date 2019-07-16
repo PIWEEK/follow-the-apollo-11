@@ -1,0 +1,43 @@
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+
+  & .message {
+    padding: 1rem;
+    width: 90%;
+    background: var(--gray-800-50);
+    color: var(--gray-400);
+		position: relative;
+
+		font-size: 1rem;
+
+		/* Borders */
+		&:before,
+	  &:after,
+		&>:first-child:before,
+		&>:first-child:after {
+    	position:absolute;
+      content:' ';
+      width: 50px;
+			height: 50px;
+      border-color: var(--turcoise-400);
+			border-style: solid;
+    }
+    &:before {
+			top: -2px;		left: -2px; 	border-width: 4px 0 0 4px
+		}
+    &:after {
+			top: -2px;		right:-2px; 			border-width: 4px 4px 0 0
+		}
+    &>:first-child:before {
+			bottom:-2px; 	right: -2px;	border-width: 0 4px 4px 0
+		}
+    &>:first-child:after {
+			bottom: -2px; left: -2px; 	border-width: 0 0 4px 4px
+		}
+  }
+}

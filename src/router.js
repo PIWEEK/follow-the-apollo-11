@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 import Game from './views/Game/Game.vue'
+import Intro from './views/Intro/Intro.vue'
 import Object3D from './views/Object3D.vue'
 
 Vue.use(Router)
@@ -13,7 +14,14 @@ export default new Router({
     {
       path: '/',
       name: 'game',
-      component: Game
+      component: Game,
+      children: [
+        {
+          path: '',
+          name: 'game:intro',
+          component: Intro
+        }
+      ]
     },
     {
       path: '/object3D',

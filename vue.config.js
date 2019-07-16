@@ -7,5 +7,14 @@ module.exports = {
     manifestPath: 'manifest.json',
     themeColor: '#ff2d58',
     msTileColor: '#000000'
+  },
+  chainWebpack: (config) => {
+    const svgRule = config.module.rule('svg')
+
+    svgRule.uses.clear()
+
+    svgRule
+      .use('vue-svg-loader')
+      .loader('vue-svg-loader')
   }
 }
