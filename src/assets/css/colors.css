@@ -1,0 +1,19 @@
+:root {
+  --black: #000;
+  --white: #fff;
+
+  --gray-400: #bdc9da;
+  --gray-800-50: #050e2397;
+
+  --turcoise-400: #25fbff;
+  --turcoise-400-40: #25fbff6a;
+
+  --ywllow-400: #ffd630;
+  --yellow-400-40: #ffd6306a;
+
+  --green-400: #1af866;
+  --green-400-60: #1af866a2;
+
+  --red-400: #f81a1a;
+  --red-400-60: #f81a1aa2;
+}

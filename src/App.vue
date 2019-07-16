@@ -1,38 +1,13 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/ar">Ar</router-link> |
-      <router-link to="/object3D">Object3D</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
-</template>
+<template src="./App.html"></template>
+<style src="./App.css"></style>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-  z-index: 10;
-  background-color: #fff;
-  opacity: .5;
-  position: fixed;
-  width: 100%;
-}
+<script>
+import Inventory from '@/components/Inventory/Inventory.vue'
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+export default {
+  name: 'App',
+  components: {
+    'fta-inventory': Inventory
+  }
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>

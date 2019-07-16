@@ -1,0 +1,16 @@
+<div class="game">
+  <a-scene arjs='sourceType: webcam;' v-pre>
+    <a-assets v-pre>
+      <a-asset-item id="rocket" src="img/models/rocket.gltf" v-pre></a-asset-item>
+      <a-asset-item id="eagle" src="img/models/eagle.gltf" v-pre></a-asset-item>
+    </a-assets>
+
+    <a-marker type='pattern' url='img/markers/eagle.patt' v-pre>
+      <a-gltf-model src="#eagle" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
+    </a-marker>
+    <a-marker type='pattern' url='img/markers/rocket.patt' v-pre>
+      <a-gltf-model src="#rocket" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
+    </a-marker>
+    <a-entity camera v-pre></a-entity>
+  </a-scene>
+</div>
