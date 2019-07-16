@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Ar from './views/Ar.vue'
+import Object3D from './views/Object3D.vue'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/ar',
       name: 'ar',
       component: Ar
+    },
+    {
+      path: '/object3D',
+      name: 'object3D',
+      component: Object3D
     },
     {
       path: '/about',

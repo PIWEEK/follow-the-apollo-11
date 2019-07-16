@@ -1,0 +1,202 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v0.9.35",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "extras" : {
+                "glTF2ExportSettings" : {
+                    "export_animations" : 0,
+                    "export_apply" : 1,
+                    "export_extras" : 1,
+                    "export_format" : "GLTF_SEPARATE",
+                    "export_morph" : 0,
+                    "export_selected" : 1,
+                    "export_skins" : 0,
+                    "export_tangents" : 1
+                }
+            },
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Sphere.008",
+            "scale" : [
+                0.39144447445869446,
+                0.829171359539032,
+                0.39144447445869446
+            ],
+            "translation" : [
+                -2.6001081466674805,
+                -7.952423095703125,
+                -0.8998370170593262
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "black",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor": [ 0, 0, 0, 1.0 ]
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "white",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor": [ 1, 1, 1, 1.0 ]
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Sphere.008",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TEXCOORD_0" : 2
+                    },
+                    "indices" : 3,
+                    "material" : 0
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 4,
+                        "NORMAL" : 5,
+                        "TEXCOORD_0" : 6
+                    },
+                    "indices" : 7,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 9102,
+            "max" : [
+                4.578380107879639,
+                18.878952026367188,
+                4.625588417053223
+            ],
+            "min" : [
+                -4.634796619415283,
+                -0.2521092891693115,
+                -4.521854400634766
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 9102,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 9102,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5123,
+            "count" : 13962,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 9476,
+            "max" : [
+                4.041094779968262,
+                24.10865020751953,
+                4.127228260040283
+            ],
+            "min" : [
+                -4.145016670227051,
+                0.22939682006835938,
+                -3.994417190551758
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 9476,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 9476,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 14856,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 109224,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 109224,
+            "byteOffset" : 109224
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 72816,
+            "byteOffset" : 218448
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 27924,
+            "byteOffset" : 291264
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 113712,
+            "byteOffset" : 319188
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 113712,
+            "byteOffset" : 432900
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 75808,
+            "byteOffset" : 546612
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 29712,
+            "byteOffset" : 622420
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 652132,
+            "uri" : "saturn5.bin"
+        }
+    ]
+}

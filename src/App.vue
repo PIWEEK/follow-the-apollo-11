@@ -3,6 +3,7 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/ar">Ar</router-link> |
+      <router-link to="/object3D">Object3D</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
@@ -19,6 +20,11 @@
 }
 #nav {
   padding: 30px;
+  z-index: 10;
+  background-color: #fff;
+  opacity: .5;
+  position: fixed;
+  width: 100%;
 }
 
 #nav a {
