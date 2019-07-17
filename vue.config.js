@@ -3,10 +3,10 @@ module.exports = {
     ? '/follow-the-apollo-11/'
     : '/',
   pwa: {
-    name: 'Follow the Apollo 11',
+    name: 'El viaje del Apolo',
     manifestPath: 'manifest.json',
     themeColor: '#ff2d58',
-    msTileColor: '#000000'
+    msTileColor: '#ff2d58'
   },
   chainWebpack: (config) => {
     const svgRule = config.module.rule('svg')
