@@ -3,30 +3,28 @@
     <a-assets v-pre>
       <a-asset-item id="rocket" src="img/models/rocket.gltf" v-pre></a-asset-item>
       <a-asset-item id="eagle" src="img/models/eagle.gltf" v-pre></a-asset-item>
+      <a-asset-item id="helmet" src="img/models/helmet.gltf" v-pre></a-asset-item>
     </a-assets>
 
-		<!--
     <a-marker type='pattern' url='img/markers/helmet.patt' v-pre>
-      <a-gltf-model src="#eagle" scale='0.2 0.2 0.2' position='0 0 0' visible="false" v-pre></a-gltf-model>
-    </a-marker>
-		-->
-    <a-marker type='pattern' url='img/markers/rocket.patt' registerevents v-pre>
-      <a-gltf-model src="#rocket" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
+        <a-gltf-model src="#helmet" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
     </a-marker>
 
-		<!--
+    <a-marker type='pattern' url='img/markers/rocket.patt' registerevents v-pre>
+      <a-gltf-model src="#rocket" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
+    </a-marker>
+
     <a-marker type='pattern' url='img/markers/trajectory.patt' v-pre>
-      <a-gltf-model src="#eagle" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
+      <a-gltf-model src="#rocket" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
     </a-marker>
 
     <a-marker type='pattern' url='img/markers/eagle.patt' v-pre>
-      <a-gltf-model src="#rocket" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
+      <a-gltf-model src="#eagle" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
     </a-marker>
 
     <a-marker type='pattern' url='img/markers/map.patt' v-pre>
       <a-gltf-model src="#eagle" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
     </a-marker>
-		-->
 
     <a-entity light="type: ambient; color: #ccc;"></a-entity>
     <a-entity light="type: directional; color: #ccc; intensity: 3;" position="0 4 0"></a-entity>
