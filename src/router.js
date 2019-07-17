@@ -3,6 +3,9 @@ import Router from 'vue-router'
 
 import Game from './views/Game/Game.vue'
 import Intro from './views/Intro/Intro.vue'
+import Find from './views/Find/Find.vue'
+import HelmetQuestion from './views/HelmetQuestion/HelmetQuestion.vue'
+
 import Object3D from './views/Object3D.vue'
 
 Vue.use(Router)
@@ -20,6 +23,16 @@ export default new Router({
           path: '',
           name: 'game:intro',
           component: Intro
+        },
+        {
+          path: 'find',
+          name: 'game:find',
+          component: Find
+        },
+        {
+          path: 'question-helmet',
+          name: 'game:question:helmet',
+          component: HelmetQuestion
         }
       ]
     },

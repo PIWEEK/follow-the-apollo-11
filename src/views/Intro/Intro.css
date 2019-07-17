@@ -1,4 +1,6 @@
-
+.intro > * {
+  margin-top: 2rem;
+}
 
 .start-button {
   margin-top: 1rem;
