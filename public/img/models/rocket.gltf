@@ -18,7 +18,7 @@
                     "export_frame_range" : 0,
                     "export_morph" : 0,
                     "export_normals" : 0,
-                    "export_selected" : 1,
+                    "export_selected" : 0,
                     "export_skins" : 0,
                     "export_texcoords" : 0,
                     "export_yup" : 0
@@ -26,7 +26,9 @@
             },
             "name" : "Scene",
             "nodes" : [
-                0
+                0,
+                1,
+                2
             ]
         }
     ],
@@ -34,6 +36,40 @@
         {
             "mesh" : 0,
             "name" : "Cylinder"
+        },
+        {
+            "camera" : 0,
+            "name" : "Camera",
+            "rotation" : [
+                0.39435628056526184,
+                0.0826171264052391,
+                0.20430295169353485,
+                0.8921422958374023
+            ],
+            "translation" : [
+                13.112072944641113,
+                -20.539670944213867,
+                34.0629997253418
+            ]
+        },
+        {
+            "name" : "Point",
+            "translation" : [
+                7.039031505584717,
+                8.879476547241211,
+                21.710283279418945
+            ]
+        }
+    ],
+    "cameras" : [
+        {
+            "name" : "Camera",
+            "perspective" : {
+                "yfov" : 0.5033799372418416,
+                "zfar" : 100,
+                "znear" : 0.10000000149011612
+            },
+            "type" : "perspective"
         }
     ],
     "materials" : [
@@ -42,9 +78,9 @@
             "name" : "white",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
-                    0.800000011920929,
-                    0.800000011920929,
-                    0.800000011920929,
+                    0.3843735456466675,
+                    0.3843735456466675,
+                    0.3843735456466675,
                     1
                 ],
                 "metallicFactor" : 0,
@@ -56,9 +92,9 @@
             "name" : "black",
             "pbrMetallicRoughness" : {
                 "baseColorFactor" : [
-                    0,
-                    0,
-                    0,
+                    0.004241788759827614,
+                    0.004241788759827614,
+                    0.004241788759827614,
                     1
                 ],
                 "metallicFactor" : 0,

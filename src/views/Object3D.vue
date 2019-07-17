@@ -13,21 +13,21 @@
       </a-assets>
 
       <a-marker type='pattern' url='img/markers/rocket.patt' v-pre>
-        <a-gltf-model src="#rocket" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
+        <a-gltf-model src="#rocket" rotation="-90 0 0" scale="1 1 1" animation-mixer='loop: repeat;'></a-gltf-model>
       </a-marker>
 
       <a-marker type='pattern' url='img/markers/eagle.patt' v-pre>
-        <a-gltf-model src="#eagle" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
+        <a-gltf-model src="#eagle" rotation="-90 0 0" scale="1 1 1" animation-mixer='loop: repeat;'></a-gltf-model>
       </a-marker>
 
       <a-marker type='pattern' url='img/markers/helmet.patt' v-pre>
-        <a-gltf-model src="#helmet" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
+        <a-gltf-model src="#helmet" rotation="-90 0 0" scale="1 1 1" animation-mixer='loop: repeat;'></a-gltf-model>
       </a-marker>
 
       <a-entity light="type: ambient; color: #ccc;"></a-entity>
-      <a-entity light="type: directional; color: #ccc; intensity: 3;" position="0 4 0"></a-entity>
-      <a-entity light="type: directional; color: #ccc; intensity: 2;" position="0 0 4"></a-entity>
-      <a-entity light="type: directional; color: #ccc; intensity: 2;" position="0 0 -4"></a-entity>
+      <a-entity light="type: directional; color: #ccc; intensity: 2.5;" position="0 14 0"></a-entity>
+      <a-entity light="type: directional; color: #ccc; intensity: 1.5;" position="0 0 14"></a-entity>
+      <a-entity light="type: directional; color: #ccc; intensity: 1.5;" position="0 0 -14"></a-entity>
 
       <a-entity camera></a-entity>
 
