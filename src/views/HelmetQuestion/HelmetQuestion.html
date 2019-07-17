@@ -1,10 +1,18 @@
-<div class="intro">
+<div class="helmet-question">
+  <svg-question class="question-icon" />
+
   <fta-textbox>
-    <p>question</p>
+    <p>¿Cuál de los 3 astronautas no pudo pisar la Luna?</p>
   </fta-textbox>
 
-  <button class="start-button" @click="onClickStartButton">
-    ¡Empezamos!
-  </button>
-</div>
+  <div class="answers">
+    <button ref="mc" class="answer" v-on:click="checkAnswer('mc')"><svg-arrow class="arrow" /><span class="answer-text">Michael Collins</span></button>
+    <button ref="ea" class="answer" v-on:click="checkAnswer('ea')"><svg-arrow class="arrow" /><span class="answer-text">Edwin Aldrin</span></button>
+    <button ref="na" class="answer" v-on:click="checkAnswer('na')"><svg-arrow class="arrow" /><span class="answer-text">Neil Armstrong</span></button>
+  </div>
 
+  <div ref="nextStep" hidden=true>
+    <button class="answer" v-on:click="goNext"><span class="answer-text">Meter en el inventario</span></button>
+  </div>
+
+</div>

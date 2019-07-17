@@ -29,7 +29,7 @@ export default new Router({
           component: Find
         },
         {
-          path: 'question-helmet',
+          path: 'helmet-question',
           name: 'game:helmet:question',
           component: HelmetQuestion
         }
