@@ -1,0 +1,18 @@
+<div class="question">
+  <svg-question class="question-icon" />
+
+  <fta-textbox>
+    <p>¿En qué guerra participó "Hap" como experta en materiales?</p>
+  </fta-textbox>
+
+  <div class="answers">
+    <button ref="iww" class="answer" v-on:click="checkAnswer('iww')"><svg-arrow class="arrow" /><span class="answer-text">I Guerra Mundial</span></button>
+    <button ref="iiww" class="answer" v-on:click="checkAnswer('iiww')"><svg-arrow class="arrow" /><span class="answer-text">II Guerra Mundial</span></button>
+    <button ref="gca" class="answer" v-on:click="checkAnswer('gca')"><svg-arrow class="arrow" /><span class="answer-text">La Guerra de los 100 años</span></button>
+  </div>
+
+  <div ref="nextStep" hidden=true>
+    <button class="answer" v-on:click="goNext"><span class="answer-text">Ya estás en la Saturn V, ¡abróchate los cinturones!</span></button>
+  </div>
+
+</div>

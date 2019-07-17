@@ -1,0 +1,18 @@
+<div class="question">
+  <svg-question class="question-icon" />
+
+  <fta-textbox>
+    <p>¿Cómo se llama a la operación de posarse en la superficie de la Luna?</p>
+  </fta-textbox>
+
+  <div class="answers">
+    <button ref="tierra" class="answer" v-on:click="checkAnswer('tierra')"><svg-arrow class="arrow" /><span class="answer-text">Aterrizar</span></button>
+    <button ref="luna" class="answer" v-on:click="checkAnswer('luna')"><svg-arrow class="arrow" /><span class="answer-text">Alunizar</span></button>
+    <button ref="cine" class="answer" v-on:click="checkAnswer('cine')"><svg-arrow class="arrow" /><span class="answer-text">Alucinar</span></button>
+  </div>
+
+  <div ref="nextStep" hidden=true>
+    <button class="answer" v-on:click="goNext"><span class="answer-text">¡Has alunizado! Respira hondo y prepárate para un paseo por la superficie lunar.</span></button>
+  </div>
+
+</div>

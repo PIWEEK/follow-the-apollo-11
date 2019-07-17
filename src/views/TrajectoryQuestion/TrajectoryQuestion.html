@@ -1,0 +1,18 @@
+<div class="question">
+  <svg-question class="question-icon" />
+
+  <fta-textbox>
+    <p>¿Qué significa STEM?</p>
+  </fta-textbox>
+
+  <div class="answers">
+    <button ref="mates" class="answer" v-on:click="checkAnswer('mates')"><svg-arrow class="arrow" /><span class="answer-text">Somos Tremendas En Matemáticas</span></button>
+    <button ref="stem" class="answer" v-on:click="checkAnswer('stem')"><svg-arrow class="arrow" /><span class="answer-text">Science Technology Engineering and Mathematics</span></button>
+    <button ref="solar" class="answer" v-on:click="checkAnswer('solar')"><svg-arrow class="arrow" /><span class="answer-text">Solar Taxonomy Engaged and Monitoring</span></button>
+  </div>
+
+  <div ref="nextStep" hidden=true>
+    <button class="answer" v-on:click="goNext"><span class="answer-text">Ya sabes cómo llegar a la Luna sin perderte</span></button>
+  </div>
+
+</div>
