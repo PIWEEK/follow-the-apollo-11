@@ -13,5 +13,9 @@
   & .item {
     height: 80%;
     fill: var(--gray-400);
+
+    &.active {
+      fill: var(--green-400);
+    }
   }
 }

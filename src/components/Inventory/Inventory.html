@@ -1,7 +1,7 @@
 <div class="inventory">
-  <svg-helmet class="item" />
-  <svg-rocket class="item" />
-  <svg-trajectory class="item" />
-  <svg-eagle class="item" />
-  <svg-map class="item" />
+  <svg-helmet class="item" :class="{ active: haveHelmet }" />
+  <svg-rocket class="item"  :class="{ active: haveRocket }" />
+  <svg-trajectory class="item" :class="{ active: haveTrajectory }" />
+  <svg-eagle class="item" :class="{ active: haveEagle }" />
+  <svg-map class="item" :class="{ active: haveMap }" />
 </div>
