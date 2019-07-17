@@ -32,6 +32,7 @@ export default {
     goNext () {
       this.nextStage()
       this.addMapToInventory()
+      document.getElementsByTagName('video')[0].remove()
       this.$router.push({ name: 'certificate' })
     }
   }
