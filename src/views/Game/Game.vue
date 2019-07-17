@@ -61,6 +61,66 @@ export default {
         }
       }
     )
+    // trajectory
+    window.AFRAME.registerComponent(
+      'registerevents-trajectory', {
+        init: function () {
+          const marker = this.el
+
+          const markerFound = () => {
+            setTimeout(() => {
+              cmp.nextStage()
+              cmp.$router.push({ name: 'game:trajectory:question' })
+            }, 1500)
+            marker.removeEventListener('markerFound', markerFound)
+          }
+          const markerLost = () => { }
+
+          marker.addEventListener('markerFound', markerFound)
+          marker.addEventListener('markerLost', markerLost)
+        }
+      }
+    )
+    // eagle
+    window.AFRAME.registerComponent(
+      'registerevents-eagle', {
+        init: function () {
+          const marker = this.el
+
+          const markerFound = () => {
+            setTimeout(() => {
+              cmp.nextStage()
+              cmp.$router.push({ name: 'game:eagle:question' })
+            }, 1500)
+            marker.removeEventListener('markerFound', markerFound)
+          }
+          const markerLost = () => { }
+
+          marker.addEventListener('markerFound', markerFound)
+          marker.addEventListener('markerLost', markerLost)
+        }
+      }
+    )
+    // map
+    window.AFRAME.registerComponent(
+      'registerevents-map', {
+        init: function () {
+          const marker = this.el
+
+          const markerFound = () => {
+            setTimeout(() => {
+              cmp.nextStage()
+              cmp.$router.push({ name: 'game:map:question' })
+            }, 1500)
+            marker.removeEventListener('markerFound', markerFound)
+          }
+          const markerLost = () => { }
+
+          marker.addEventListener('markerFound', markerFound)
+          marker.addEventListener('markerLost', markerLost)
+        }
+      }
+    )
   },
   methods: {
     ...mapMutations({
