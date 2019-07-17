@@ -1,29 +1,29 @@
 <div class="game">
-  <a-scene arjs='debugUIEnabled: false' vr-mode-ui="enabled: false" v-pre>
-    <a-assets v-pre>
-      <a-asset-item id="rocket" src="img/models/rocket.gltf" v-pre></a-asset-item>
-      <a-asset-item id="eagle" src="img/models/eagle.gltf" v-pre></a-asset-item>
-      <a-asset-item id="helmet" src="img/models/helmet.gltf" v-pre></a-asset-item>
+  <a-scene arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
+    <a-assets>
+      <a-asset-item id="rocket" src="img/models/rocket.gltf"></a-asset-item>
+      <a-asset-item id="eagle" src="img/models/eagle.gltf"></a-asset-item>
+      <a-asset-item id="helmet" src="img/models/helmet.gltf"></a-asset-item>
     </a-assets>
 
-    <a-marker type='pattern' url='img/markers/helmet.patt' v-pre>
-        <a-gltf-model src="#helmet" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
+    <a-marker type="pattern" url="img/markers/helmet.patt" registerevents-helmet v-if="showHelmetMarker">
+      <a-gltf-model src="#helmet" rotation="-90 0 0" scale="1 2 1" animation-mixer="loop: repeat;"></a-gltf-model>
     </a-marker>
 
-    <a-marker type='pattern' url='img/markers/rocket.patt' registerevents v-pre>
-      <a-gltf-model src="#rocket" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
+    <a-marker type="pattern" url="img/markers/rocket.patt" registerevents-rocket v-if="showRocketMarker">
+      <a-gltf-model src="#rocket" rotation="-90 0 0" scale="1 2 1" animation-mixer="loop: repeat;"></a-gltf-model>
     </a-marker>
 
-    <a-marker type='pattern' url='img/markers/trajectory.patt' v-pre>
-      <a-gltf-model src="#rocket" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
+    <a-marker type="pattern" url="img/markers/trajectory.patt" v-if="showTrajectoryMarker">
+      <a-gltf-model src="#rocket" scale="0.2 0.2 0.2" position="0 0 0"></a-gltf-model>
     </a-marker>
 
-    <a-marker type='pattern' url='img/markers/eagle.patt' v-pre>
-      <a-gltf-model src="#eagle" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
+    <a-marker type="pattern" url="img/markers/eagle.patt" v-if="showEagleMarker">
+      <a-gltf-model src="#eagle" rotation="-90 0 0" scale="1 2 1" animation-mixer="loop: repeat;"></a-gltf-model>
     </a-marker>
 
-    <a-marker type='pattern' url='img/markers/map.patt' v-pre>
-      <a-gltf-model src="#eagle" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
+    <a-marker type="pattern" url="img/markers/map.patt" v-if="showMapMarker">
+      <a-gltf-model src="#eagle" scale="0.2 0.2 0.2" position="0 0 0"></a-gltf-model>
     </a-marker>
 
     <a-entity light="type: ambient; color: #ccc;"></a-entity>
@@ -31,8 +31,15 @@
     <a-entity light="type: directional; color: #ccc; intensity: 2;" position="0 0 4"></a-entity>
     <a-entity light="type: directional; color: #ccc; intensity: 2;" position="0 0 -4"></a-entity>
 
-    <a-entity camera v-pre></a-entity>
+    <a-entity camera></a-entity>
   </a-scene>
 
+  <div>
+    {{ showHelmetMarker }}
+    {{ showRocketMarker }}
+    {{ showTrajectoryMarker }}
+    {{ showEagleMarker }}
+    {{ showMapMarker }}
+  </div>
   <router-view class="content" />
 </div>

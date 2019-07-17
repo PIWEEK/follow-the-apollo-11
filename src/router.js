@@ -30,7 +30,7 @@ export default new Router({
         },
         {
           path: 'question-helmet',
-          name: 'game:question:helmet',
+          name: 'game:helmet:question',
           component: HelmetQuestion
         }
       ]
