@@ -4,17 +4,15 @@
     <a-scene light="defaultLightsEnabled: false">
 
       <a-assets>
-        <a-asset-item id="rocket" src="img/models/rocket.gltf" >
+        <a-asset-item id="rocket" src="img/models/rocket_animate.gltf" >
         </a-asset-item>
         <a-asset-item id="eagle" src="img/models/eagle.gltf" >
         </a-asset-item>
       </a-assets>
 
-      <a-marker-camera preset='hiro'>
-        <a-entity rotation="-90 0 0" animation="property: rotation; to:-90 360 0; loop: true; dur: 10000">
-          <a-gltf-model src="#eagle" scale="0.2 0.2 0.2" position="0 0 0" ></a-gltf-model>
-        </a-entity>
-      </a-marker-camera>
+      <a-marker preset='hiro'>
+        <a-gltf-model src="#rocket" rotation="-90 0 0" scale="0.2 0.2 0.2" position="0 0 0" animation-mixer='loop: repeat;'></a-gltf-model>
+      </a-marker>
 
       <a-entity light="type: ambient; color: #ccc;"></a-entity>
       <a-entity light="type: directional; color: #ccc; intensity: 3;" position="0 4 0"></a-entity>
