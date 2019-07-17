@@ -11,6 +11,7 @@ import EagleQuestion from './views/EagleQuestion/EagleQuestion.vue'
 import MapQuestion from './views/MapQuestion/MapQuestion.vue'
 
 import Object3D from './views/Object3D.vue'
+import Certificate from './views/Certificate/Certificate.vue'
 
 Vue.use(Router)
 
@@ -63,7 +64,13 @@ export default new Router({
       path: '/object3D',
       name: 'object3D',
       component: Object3D
+    },
+    {
+      path: '/certificate',
+      name: 'certificate',
+      component: Certificate
     }
+
     // {
     //   path: '/about',
     //   name: 'about',

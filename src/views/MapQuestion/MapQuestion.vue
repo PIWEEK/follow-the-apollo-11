@@ -32,7 +32,7 @@ export default {
     goNext () {
       this.nextStage()
       this.addMapToInventory()
-      this.$router.push({ name: 'game:find' })
+      this.$router.push({ name: 'certificate' })
     }
   }
 }
