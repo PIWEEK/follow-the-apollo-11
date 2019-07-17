@@ -12,7 +12,7 @@ export default {
   },
   methods: {
     onClickStartButton () {
-      this.$router.push('/find')
+      this.$router.push({ name: 'game:find' })
     }
   }
 }

@@ -6,7 +6,7 @@ export default {
   name: 'Game',
   mounted () {
     window.AFRAME.registerComponent(
-      'registereventsrocket', {
+      'registerevents', {
         init: function () {
           const marker = this.el
 

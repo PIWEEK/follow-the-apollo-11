@@ -10,9 +10,9 @@
       <a-gltf-model src="#eagle" scale='0.2 0.2 0.2' position='0 0 0' visible="false" v-pre></a-gltf-model>
     </a-marker>
 		-->
-    <a-marker-camera type='pattern' url='img/markers/rocket.patt' registereventsrocket v-pre>
+    <a-marker type='pattern' url='img/markers/rocket.patt' registerevents v-pre>
       <a-gltf-model src="#rocket" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
-    </a-marker-camera>
+    </a-marker>
 
 		<!--
     <a-marker type='pattern' url='img/markers/trajectory.patt' v-pre>
@@ -27,6 +27,11 @@
       <a-gltf-model src="#eagle" scale='0.2 0.2 0.2' position='0 0 0' v-pre></a-gltf-model>
     </a-marker>
 		-->
+
+    <a-entity light="type: ambient; color: #ccc;"></a-entity>
+    <a-entity light="type: directional; color: #ccc; intensity: 3;" position="0 4 0"></a-entity>
+    <a-entity light="type: directional; color: #ccc; intensity: 2;" position="0 0 4"></a-entity>
+    <a-entity light="type: directional; color: #ccc; intensity: 2;" position="0 0 -4"></a-entity>
 
     <a-entity camera v-pre></a-entity>
   </a-scene>

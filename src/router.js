@@ -16,7 +16,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'game',
       component: Game,
       children: [
         {
