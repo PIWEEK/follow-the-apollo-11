@@ -1,7 +1,8 @@
 <template>
   <div class="object3D">
-    <p>Tip: Ctrl + Alt + i / {{ loading }}</p>
-    <a-scene>
+    <p>Tip: Ctrl + Alt + i</p>
+    <a-scene light="defaultLightsEnabled: false">
+
       <a-assets>
         <a-asset-item id="rocket" src="img/models/rocket.gltf" >
         </a-asset-item>
@@ -9,27 +10,24 @@
         </a-asset-item>
       </a-assets>
 
-      <a-marker preset='hiro'>
-        <a-gltf-model src="#eagle" scale='0.2 0.2 0.2' position='0 0 0'></a-gltf-model>
-        <!-- <a-gltf-model src="#rocket" scale='0.2 0.2 0.2' position='0 0 0'></a-gltf-model> -->
+      <a-marker type='pattern' url='img/markers/rocket.patt' v-pre>
+        <a-gltf-model src="#eagle" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
       </a-marker>
 
+      <a-entity light="type: ambient; color: #ccc;"></a-entity>
+      <a-entity light="type: directional; color: #ccc; intensity: 3;" position="0 4 0"></a-entity>
+      <a-entity light="type: directional; color: #ccc; intensity: 2;" position="0 0 4"></a-entity>
+      <a-entity light="type: directional; color: #ccc; intensity: 2;" position="0 0 -4"></a-entity>
+
       <a-entity camera></a-entity>
+
     </a-scene>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'object3D',
-  data () {
-    return {
-      loading: false
-    }
-  },
-  mounted () {
-    this.loading = true
-  }
+  name: 'object3D'
 }
 </script>
 
