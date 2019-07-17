@@ -10,12 +10,18 @@
                 "glTF2ExportSettings" : {
                     "export_animations" : 0,
                     "export_apply" : 1,
+                    "export_colors" : 0,
+                    "export_current_frame" : 0,
                     "export_extras" : 1,
+                    "export_force_sampling" : 0,
                     "export_format" : "GLTF_SEPARATE",
+                    "export_frame_range" : 0,
                     "export_morph" : 0,
+                    "export_normals" : 0,
                     "export_selected" : 1,
                     "export_skins" : 0,
-                    "export_tangents" : 1
+                    "export_texcoords" : 0,
+                    "export_yup" : 0
                 }
             },
             "name" : "Scene",
@@ -27,51 +33,55 @@
     "nodes" : [
         {
             "mesh" : 0,
-            "name" : "Sphere.008",
-            "scale" : [
-                0.39144447445869446,
-                0.829171359539032,
-                0.39144447445869446
-            ],
-            "translation" : [
-                -4.678851127624512,
-                1.4793612957000732,
-                -2.070760726928711
-            ]
+            "name" : "Cylinder"
         }
     ],
     "materials" : [
         {
             "doubleSided" : true,
-            "name" : "black",
-            "pbrMetallicRoughness" : {}
+            "name" : "white",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.800000011920929,
+                    0.800000011920929,
+                    0.800000011920929,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0
+            }
         },
         {
             "doubleSided" : true,
-            "name" : "white",
-            "pbrMetallicRoughness" : {}
+            "name" : "black",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0
+            }
         }
     ],
     "meshes" : [
         {
-            "name" : "Sphere.008",
+            "name" : "Cylinder",
             "primitives" : [
                 {
                     "attributes" : {
-                        "POSITION" : 0,
-                        "NORMAL" : 1,
-                        "TEXCOORD_0" : 2
+                        "POSITION" : 0
                     },
-                    "indices" : 3,
+                    "indices" : 1,
                     "material" : 0
                 },
                 {
                     "attributes" : {
-                        "POSITION" : 4,
-                        "NORMAL" : 5,
-                        "TEXCOORD_0" : 6
+                        "POSITION" : 2
                     },
-                    "indices" : 7,
+                    "indices" : 3,
                     "material" : 1
                 }
             ]
@@ -81,117 +91,73 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 9108,
+            "count" : 9368,
             "max" : [
-                4.599630832672119,
-                14.541169166564941,
-                4.576237678527832
+                0.31804439425468445,
+                2.2347497940063477,
+                0.31922832131385803
             ],
             "min" : [
-                -4.613545894622803,
-                -4.589892387390137,
-                -4.571205139160156
+                -0.32283729314804077,
+                -1.7252490520477295,
+                -0.3166065216064453
             ],
             "type" : "VEC3"
         },
         {
             "bufferView" : 1,
-            "componentType" : 5126,
-            "count" : 9108,
-            "type" : "VEC3"
+            "componentType" : 5123,
+            "count" : 14856,
+            "type" : "SCALAR"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 9108,
-            "type" : "VEC2"
+            "count" : 9036,
+            "max" : [
+                0.3601078689098358,
+                1.3674871921539307,
+                0.3582443594932556
+            ],
+            "min" : [
+                -0.3611815869808197,
+                -1.8050992488861084,
+                -0.3578989505767822
+            ],
+            "type" : "VEC3"
         },
         {
             "bufferView" : 3,
             "componentType" : 5123,
             "count" : 13962,
             "type" : "SCALAR"
-        },
-        {
-            "bufferView" : 4,
-            "componentType" : 5126,
-            "count" : 9482,
-            "max" : [
-                4.062345504760742,
-                19.77086639404297,
-                4.077877521514893
-            ],
-            "min" : [
-                -4.12376594543457,
-                -4.108386039733887,
-                -4.043767929077148
-            ],
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 5,
-            "componentType" : 5126,
-            "count" : 9482,
-            "type" : "VEC3"
-        },
-        {
-            "bufferView" : 6,
-            "componentType" : 5126,
-            "count" : 9482,
-            "type" : "VEC2"
-        },
-        {
-            "bufferView" : 7,
-            "componentType" : 5123,
-            "count" : 14856,
-            "type" : "SCALAR"
         }
     ],
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 109296,
+            "byteLength" : 112416,
             "byteOffset" : 0
         },
         {
             "buffer" : 0,
-            "byteLength" : 109296,
-            "byteOffset" : 109296
+            "byteLength" : 29712,
+            "byteOffset" : 112416
         },
         {
             "buffer" : 0,
-            "byteLength" : 72864,
-            "byteOffset" : 218592
+            "byteLength" : 108432,
+            "byteOffset" : 142128
         },
         {
             "buffer" : 0,
             "byteLength" : 27924,
-            "byteOffset" : 291456
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 113784,
-            "byteOffset" : 319380
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 113784,
-            "byteOffset" : 433164
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 75856,
-            "byteOffset" : 546948
-        },
-        {
-            "buffer" : 0,
-            "byteLength" : 29712,
-            "byteOffset" : 622804
+            "byteOffset" : 250560
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 652516,
+            "byteLength" : 278484,
             "uri" : "rocket.bin"
         }
     ]

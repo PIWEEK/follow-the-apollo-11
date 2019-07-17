@@ -4,14 +4,14 @@
     <a-scene light="defaultLightsEnabled: false">
 
       <a-assets>
-        <a-asset-item id="rocket" src="img/models/rocket_animate.gltf" >
+        <a-asset-item id="rocket" src="img/models/rocket.gltf" >
         </a-asset-item>
         <a-asset-item id="eagle" src="img/models/eagle.gltf" >
         </a-asset-item>
       </a-assets>
 
-      <a-marker preset='hiro'>
-        <a-gltf-model src="#rocket" rotation="-90 0 0" scale="0.2 0.2 0.2" position="0 0 0" animation-mixer='loop: repeat;'></a-gltf-model>
+      <a-marker type='pattern' url='img/markers/rocket.patt' v-pre>
+        <a-gltf-model src="#eagle" rotation="-90 0 0" scale="1 2 1" animation-mixer='loop: repeat;'></a-gltf-model>
       </a-marker>
 
       <a-entity light="type: ambient; color: #ccc;"></a-entity>
