@@ -6,10 +6,10 @@
     <p>Pon tu nombre y recibe tu diploma por cumplir la misión</p>
   </fta-textbox>
 
-  <form class="fCertificate" @submit.prevent="generateCertificate">
+  <form class="form-certificate" @submit.prevent="generateCertificate">
     <input type="text" class="inputCertificate" v-model="astroName" required placeholder="p.e.: Neil..." />
     <button class="startButton" type="submit"><span>Consigue tu diploma</span></button>
   </form>
 
-  <svg-certificate ref="certificate" id="certificate" />
+  <svg-certificate class="diploma" ref="certificate" id="certificate" />
 </div>

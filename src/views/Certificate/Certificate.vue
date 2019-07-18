@@ -30,18 +30,22 @@ export default {
     _generateAndDownloadPngFromSvg (svg) {
       var canvas = document.createElement('canvas')
       var svgSize = svg.getBoundingClientRect()
+      console.log('SVG', svg)
       canvas.width = svgSize.width
       canvas.height = svgSize.height
       canvas.style.width = svgSize.width
       canvas.style.height = svgSize.height
+      svg.setAttribute('height', canvas.height)
+      svg.setAttribute('width', canvas.width)
       var ctx = canvas.getContext('2d')
       var data = (new XMLSerializer()).serializeToString(svg)
       var DOMURL = window.URL || window.webkitURL || window
 
-      var img = new Image()
-      var svgBlob = new Blob([data], { type: 'image/svg+xml;charset=utf-8' })
+      var ns = '<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">'
+      var svgBlob = new Blob([ns + data], { type: 'image/svg+xml;charset=utf-8' })
       var url = DOMURL.createObjectURL(svgBlob)
 
+      var img = new Image()
       img.onload = function () {
         ctx.drawImage(img, 0, 0)
         DOMURL.revokeObjectURL(url)

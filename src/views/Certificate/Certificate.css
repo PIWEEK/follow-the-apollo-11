@@ -12,14 +12,21 @@
   & > * {
     margin-top: 2rem;
   }
+  & .congratulations {
+    width: 80%;
+  }
 }
 
-.fCertificate {
+.form-certificate {
   width: 90%;
   display: flex;
   align-content: center;
   flex-direction: column;
   justify-content: center;
+
+  &.inputCertificate {
+    width: 100%;
+  }
 
   & .startButton {
     width: max-content;
@@ -27,10 +34,8 @@
   }
 }
 
-.inputCertificate {
-  width: 100%;
+.diploma {
+  width: 90vw;
+  margin-bottom: 4rem;
 }
 
-.congratulations {
-  width: 80%;
-}
