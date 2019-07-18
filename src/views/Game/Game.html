@@ -41,5 +41,8 @@
     {{ showEagleMarker }}
     {{ showMapMarker }}
   </div>
-  <router-view class="content" />
+
+  <transition name="anim-fade" mode="out-in">
+    <router-view class="content" />
+  </transition>
 </div>

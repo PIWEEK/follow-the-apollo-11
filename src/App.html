@@ -4,7 +4,9 @@
     <router-link to="/object3D">Object3D</router-link> |
   </div>
 
-  <router-view/>
+  <transition name="anim-fade" mode="out-in">
+    <router-view/>
+  </transition>
 
   <fta-inventory></fta-inventory>
 </div>

@@ -13,9 +13,11 @@
   & .item {
     height: 80%;
     fill: var(--gray-400);
+    transition: 1s;
 
     &.active {
       fill: var(--green-400);
+      animation: bounce-in .5s;
     }
   }
 }
