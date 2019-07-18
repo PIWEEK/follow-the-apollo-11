@@ -5,8 +5,8 @@ module.exports = {
   pwa: {
     name: 'El viaje del Apolo',
     manifestPath: 'manifest.json',
-    themeColor: '#ff2d58',
-    msTileColor: '#ff2d58'
+    themeColor: '#050e2397',
+    msTileColor: '#050e2397'
   },
   chainWebpack: (config) => {
     const svgRule = config.module.rule('svg')
