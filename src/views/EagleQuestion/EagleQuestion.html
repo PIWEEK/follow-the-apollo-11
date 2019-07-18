@@ -12,7 +12,7 @@
   </div>
 
   <transition name="anim-fade">
-    <div ref="nextStep" hidden=true>
+    <div ref="nextStep" v-if="showNextStep">
       <button class="startButton" v-on:click="goNext"><span>Prepárate para alunizar</span></button>
     </div>
   </transition>
