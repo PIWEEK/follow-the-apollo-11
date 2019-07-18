@@ -1,0 +1,223 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v0.9.35",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "Cylinder"
+        },
+        {
+            "mesh" : 0,
+            "name" : "Cylinder"
+        }
+    ],
+    "animations" : [
+        {
+            "channels" : [
+                {
+                    "sampler" : 0,
+                    "target" : {
+                        "node" : 1,
+                        "path" : "translation"
+                    }
+                }
+            ],
+            "name" : "CylinderAction",
+            "samplers" : [
+                {
+                    "input" : 6,
+                    "interpolation" : "CUBICSPLINE",
+                    "output" : 7
+                }
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "white.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.3843735456466675,
+                    0.3843735456466675,
+                    0.3843735456466675,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "black",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.004241788759827614,
+                    0.004241788759827614,
+                    0.004241788759827614,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Cylinder",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    },
+                    "indices" : 2,
+                    "material" : 0
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "NORMAL" : 4
+                    },
+                    "indices" : 5,
+                    "material" : 1
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 13549,
+            "max" : [
+                0.31804439425468445,
+                2.2347497940063477,
+                0.3192278742790222
+            ],
+            "min" : [
+                -0.32283729314804077,
+                -1.725249171257019,
+                -0.31660696864128113
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 13549,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5123,
+            "count" : 14568,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 13094,
+            "max" : [
+                0.3601078689098358,
+                1.3674871921539307,
+                0.3582439124584198
+            ],
+            "min" : [
+                -0.3611815869808197,
+                -1.8050992488861084,
+                -0.35789939761161804
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 13094,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5123,
+            "count" : 13962,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 4,
+            "max" : [
+                5
+            ],
+            "min" : [
+                0.041666666666666664
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5126,
+            "count" : 12,
+            "type" : "VEC3"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 162588,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 162588,
+            "byteOffset" : 162588
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 29136,
+            "byteOffset" : 325176
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 157128,
+            "byteOffset" : 354312
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 157128,
+            "byteOffset" : 511440
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 27924,
+            "byteOffset" : 668568
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 16,
+            "byteOffset" : 696492
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 144,
+            "byteOffset" : 696508
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 696652,
+            "uri" : "rocket_animate.bin"
+        }
+    ]
+}
