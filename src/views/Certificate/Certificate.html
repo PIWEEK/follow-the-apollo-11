@@ -2,7 +2,15 @@
 
   <h2>¡ENHORABUENA!</h2>
   <fta-textbox>
-    <p>Has llegado hasta el final de la Misión Apolo, gracias a la ayuda de hombre y mujeres increíbles</p>
+    <p>Has llegado hasta el final de la Misión Apolo, gracias a la ayuda de hombres y mujeres increíbles</p>
   </fta-textbox>
+
+  <p>Pon tu nombre y recibe tu diploma por cumplir la misión</p>
+  <form @submit.prevent="generateCertificate">
+    <input type="text" v-model="astroName" required placeholder="p.e.: Neil..." />
+    <button type="submit">Consigue tu diploma</button>
+  </form>
+
+  <svg-certificate ref="certificate" id="certificate" v-show="showCertificate" />
 
 </div>

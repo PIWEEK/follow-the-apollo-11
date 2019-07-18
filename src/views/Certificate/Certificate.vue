@@ -3,11 +3,26 @@
 
 <script>
 import TextBox from '@/components/TextBox/TextBox.vue'
+import certificateSvg from '@/assets/svgs/certificate.svg' // eslint-disable-next-line
 
 export default {
   name: 'Certificate',
+  data: () => ({
+    astroName: '',
+    showCertificate: false
+  }),
   components: {
-    'fta-textbox': TextBox
+    'fta-textbox': TextBox,
+    'svg-certificate': certificateSvg
+  },
+  methods: {
+    generateCertificate () {
+      const now = new Date()
+      const today = now.toLocaleDateString()
+      this.showCertificate = true
+      this.$refs.certificate.children[8].children[0].textContent = this.astroName
+      this.$refs.certificate.children[20].children[0].textContent = today
+    }
   }
 }
 </script>
