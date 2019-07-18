@@ -10,7 +10,7 @@
         </a-asset-item>
         <a-asset-item id="helmet" src="img/models/helmet_animate.gltf" >
         </a-asset-item>
-        <a-asset-item id="trajectory" src="img/models/trajectory2.gltf" >
+        <a-asset-item id="trajectory" src="img/models/trajectory.gltf" >
         </a-asset-item>
       </a-assets>
 
