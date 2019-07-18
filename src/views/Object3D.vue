@@ -12,6 +12,8 @@
         </a-asset-item>
         <a-asset-item id="trajectory" src="img/models/trajectory.gltf" >
         </a-asset-item>
+        <a-asset-item id="map" src="img/models/map.gltf" >
+        </a-asset-item>
       </a-assets>
 
       <a-marker type='pattern' url='img/markers/rocket.patt' v-pre>
@@ -47,7 +49,16 @@
           rotation="-90 0 0"
           scale="1 1 1"
           position="0 1 0"
-          animation_mixer="clip: *;"
+          >
+        </a-gltf-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='img/markers/map.patt' v-pre>
+        <a-gltf-model
+          src="#map"
+          rotation="-65 0 0"
+          scale="1 1 1"
+          position="0 1 0"
           >
         </a-gltf-model>
       </a-marker>
