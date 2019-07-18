@@ -4,6 +4,7 @@
 <script>
 import TextBox from '@/components/TextBox/TextBox.vue'
 import certificateSvg from '@/assets/svgs/certificate.svg' // eslint-disable-next-line
+import congratulationsSvg from '@/assets/svgs/congratulations.svg'
 
 export default {
   name: 'Certificate',
@@ -13,7 +14,8 @@ export default {
   }),
   components: {
     'fta-textbox': TextBox,
-    'svg-certificate': certificateSvg
+    'svg-certificate': certificateSvg,
+    'svg-congratulations': congratulationsSvg
   },
   methods: {
     generateCertificate () {

@@ -1,14 +1,15 @@
 <div class="certificate">
 
-  <h2>¡ENHORABUENA!</h2>
+  <svg-congratulations class="congratulations" />
+
   <fta-textbox>
     <p>Has llegado hasta el final de la Misión Apolo, gracias a la ayuda de hombres y mujeres increíbles</p>
+    <p>Pon tu nombre y recibe tu diploma por cumplir la misión</p>
   </fta-textbox>
 
-  <p>Pon tu nombre y recibe tu diploma por cumplir la misión</p>
-  <form @submit.prevent="generateCertificate">
-    <input type="text" v-model="astroName" required placeholder="p.e.: Neil..." />
-    <button type="submit">Consigue tu diploma</button>
+  <form class="fCertificate" @submit.prevent="generateCertificate">
+    <input type="text" class="inputCertificate" v-model="astroName" required placeholder="p.e.: Neil..." />
+    <button class="startButton" type="submit"><span>Consigue tu diploma</span></button>
   </form>
 
   <svg-certificate ref="certificate" id="certificate" v-show="showCertificate" />

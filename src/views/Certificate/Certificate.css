@@ -14,3 +14,23 @@
   }
 }
 
+.fCertificate {
+  width: 90%;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+
+  & .startButton {
+    width: max-content;
+    margin: 1rem auto;
+  }
+}
+
+.inputCertificate {
+  width: 100%;
+}
+
+.congratulations {
+  width: 80%;
+}
