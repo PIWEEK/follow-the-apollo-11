@@ -14,8 +14,8 @@ export default {
   }),
   components: {
     'fta-textbox': TextBox,
-    'svg-certificate': certificateSvg,
-    'svg-congratulations': congratulationsSvg
+    'svg-congratulations': congratulationsSvg,
+    'svg-certificate': certificateSvg
   },
   methods: {
     generateCertificate () {
@@ -24,6 +24,46 @@ export default {
       this.showCertificate = true
       this.$refs.certificate.children[8].children[0].textContent = this.astroName
       this.$refs.certificate.children[20].children[0].textContent = today
+
+      this._generateAndDownloadPngFromSvg(this.$refs.certificate)
+    },
+    _generateAndDownloadPngFromSvg (svg) {
+      var canvas = document.createElement('canvas')
+      var svgSize = svg.getBoundingClientRect()
+      canvas.width = svgSize.width
+      canvas.height = svgSize.height
+      canvas.style.width = svgSize.width
+      canvas.style.height = svgSize.height
+      var ctx = canvas.getContext('2d')
+      var data = (new XMLSerializer()).serializeToString(svg)
+      var DOMURL = window.URL || window.webkitURL || window
+
+      var img = new Image()
+      var svgBlob = new Blob([data], { type: 'image/svg+xml;charset=utf-8' })
+      var url = DOMURL.createObjectURL(svgBlob)
+
+      img.onload = function () {
+        ctx.drawImage(img, 0, 0)
+        DOMURL.revokeObjectURL(url)
+
+        var imgURI = canvas
+          .toDataURL('image/png')
+          .replace('image/png', 'image/octet-stream')
+
+        var evt = new MouseEvent('click', {
+          view: window,
+          bubbles: false,
+          cancelable: true
+        })
+
+        var a = document.createElement('a')
+        a.setAttribute('download', 'diploma-apolo-11.png')
+        a.setAttribute('href', imgURI)
+        a.setAttribute('target', '_blank')
+
+        a.dispatchEvent(evt)
+      }
+      img.src = url
     }
   }
 }
