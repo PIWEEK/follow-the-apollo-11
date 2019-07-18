@@ -16,7 +16,7 @@ export default {
     ...mapMutations({
       nextStage: 'game/nextStage'
     }),
-    onClickStartButton () {
+    goNext () {
       this.nextStage()
       this.$router.push({ name: 'game:find' })
     }

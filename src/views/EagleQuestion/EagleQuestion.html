@@ -11,8 +11,10 @@
     <button ref="cine" class="answer" v-on:click="checkAnswer('cine')"><svg-arrow class="arrow" /><span class="answer-text">Alucinar</span></button>
   </div>
 
-  <div ref="nextStep" hidden=true>
-    <button class="answer" v-on:click="goNext"><span class="answer-text">¡Has alunizado! Respira hondo y prepárate para un paseo por la superficie lunar.</span></button>
-  </div>
+  <transition name="anim-fade">
+    <div ref="nextStep" hidden=true>
+      <button class="startButton" v-on:click="goNext"><span>Prepárate para alunizar</span></button>
+    </div>
+  </transition>
 
 </div>

@@ -46,3 +46,23 @@ h2 {
 svg {
   width: 100%;
 }
+
+.startButton {
+  align-items: center;
+  background: var(--gray-800-50);
+  color: var(--gray-400);
+  display: flex;
+  left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 2px solid var(--turquoise-400);
+
+  & span {
+    flex: 1 0 auto;
+	  font-size: 1rem;
+	  font-weight: bold;
+    color: var(--turquoise-400);
+  }
+
+}

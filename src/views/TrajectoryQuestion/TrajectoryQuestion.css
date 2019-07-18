@@ -11,11 +11,13 @@
   color: var(--gray-400);
   display: flex;
 	font-size: 1rem;
-  height: 5rem;
+  height: 3rem;
   left: 0;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: .5rem;
   width: 100%;
+  border: 0;
+  transition: 1s;
 
   & .arrow {
     height: 80%;
@@ -26,18 +28,18 @@
     width: calc(100% - 2rem);
     color: white;
   }
-}
 
-.answer-ok {
-  background: var(--green-400-60);
-  font-weight: bold;
-}
+  &.answer-ok {
+    background: var(--green-400-60);
+    font-weight: bold;
+  }
 
-.answer-error {
-  background: var(--red-400-60);
+  &.answer-error {
+    background: var(--red-400-60);
+  }
 }
 
 .question-icon {
-  width: 6rem;
+  width: 4rem;
   margin-bottom: 1rem;
 }

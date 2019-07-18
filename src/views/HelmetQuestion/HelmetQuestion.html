@@ -11,8 +11,10 @@
     <button ref="na" class="answer" v-on:click="checkAnswer('na')"><svg-arrow class="arrow" /><span class="answer-text">Neil Armstrong</span></button>
   </div>
 
-  <div ref="nextStep" hidden=true>
-    <button class="answer" v-on:click="goNext"><span class="answer-text">Ya tienes el traje, ahora debes subir al Saturn V que despegará en poco tiempo. ¡No te retrases!</span></button>
-  </div>
+  <transition name="anim-fade">
+    <div ref="nextStep" v-if="showNextStep">
+      <button class="startButton" v-on:click="goNext"><span>Ya puedes subir a la Saturn V</span></button>
+    </div>
+  </transition>
 
 </div>

@@ -9,6 +9,9 @@ import questionSvg from '@/assets/svgs/question.svg'
 
 export default {
   name: 'MapQuestion',
+  data: () => ({
+    showNextStep: false
+  }),
   components: {
     'fta-textbox': TextBox,
     'svg-arrow': arrowSvg,
@@ -27,7 +30,7 @@ export default {
         this.$refs[answer].classList.add('answer-error')
         this.$refs.selenografia.classList.add('answer-ok')
       }
-      this.$refs.nextStep.hidden = false
+      this.showNextStep = true
     },
     goNext () {
       this.nextStage()

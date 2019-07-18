@@ -1,9 +1,10 @@
 .intro-text {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 .title {
-  width: 75%;
+  width: 65%;
+  margin-top: -2rem;
 }
 
 .start-button {
