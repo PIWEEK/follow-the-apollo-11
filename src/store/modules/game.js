@@ -14,7 +14,7 @@ const STAGES = [
   'END'
 ]
 
-const getNextStage = (cuurrent) => STAGES[STAGES.indexOf(cuurrent) + 1]
+const getNextStage = (current) => STAGES[STAGES.indexOf(current) + 1]
 
 const initialState = {
   currentStage: STAGES[0],

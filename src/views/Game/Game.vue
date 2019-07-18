@@ -3,10 +3,13 @@
 
 <script>
 import { mapGetters, mapMutations } from 'vuex'
+import TextBox from '@/components/TextBox/TextBox.vue'
 
 export default {
   name: 'Game',
-
+  components: {
+    'fta-textbox': TextBox
+  },
   computed: {
     ...mapGetters({
       showHelmetMarker: 'game/showHelmetMarker',
@@ -47,12 +50,17 @@ export default {
           const marker = this.el
 
           const markerFound = () => {
-            setTimeout(() => {
-              cmp.nextStage()
-              cmp.$router.push({ name: 'game:rocket:question' })
-            }, 1500)
+            if (cmp.showRocketMarker) {
+              setTimeout(() => {
+                cmp.nextStage()
+                cmp.$router.push({ name: 'game:rocket:question' })
+              }, 1500)
 
-            marker.removeEventListener('markerFound', markerFound)
+              marker.removeEventListener('markerFound', markerFound)
+            } else {
+              cmp.$router.push({ name: 'game:error:question' })
+              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 2000)
+            }
           }
           const markerLost = () => { }
 
@@ -68,11 +76,16 @@ export default {
           const marker = this.el
 
           const markerFound = () => {
-            setTimeout(() => {
-              cmp.nextStage()
-              cmp.$router.push({ name: 'game:trajectory:question' })
-            }, 1500)
-            marker.removeEventListener('markerFound', markerFound)
+            if (cmp.showTrajectoryMarker) {
+              setTimeout(() => {
+                cmp.nextStage()
+                cmp.$router.push({ name: 'game:trajectory:question' })
+              }, 1500)
+              marker.removeEventListener('markerFound', markerFound)
+            } else {
+              cmp.$router.push({ name: 'game:error:question' })
+              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 2000)
+            }
           }
           const markerLost = () => { }
 
@@ -88,11 +101,16 @@ export default {
           const marker = this.el
 
           const markerFound = () => {
-            setTimeout(() => {
-              cmp.nextStage()
-              cmp.$router.push({ name: 'game:eagle:question' })
-            }, 1500)
-            marker.removeEventListener('markerFound', markerFound)
+            if (cmp.showEagleMarker) {
+              setTimeout(() => {
+                cmp.nextStage()
+                cmp.$router.push({ name: 'game:eagle:question' })
+              }, 1500)
+              marker.removeEventListener('markerFound', markerFound)
+            } else {
+              cmp.$router.push({ name: 'game:error:question' })
+              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 2000)
+            }
           }
           const markerLost = () => { }
 
@@ -108,11 +126,16 @@ export default {
           const marker = this.el
 
           const markerFound = () => {
-            setTimeout(() => {
-              cmp.nextStage()
-              cmp.$router.push({ name: 'game:map:question' })
-            }, 1500)
-            marker.removeEventListener('markerFound', markerFound)
+            if (cmp.showMapMarker) {
+              setTimeout(() => {
+                cmp.nextStage()
+                cmp.$router.push({ name: 'game:map:question' })
+              }, 1500)
+              marker.removeEventListener('markerFound', markerFound)
+            } else {
+              cmp.$router.push({ name: 'game:error:question' })
+              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 2000)
+            }
           }
           const markerLost = () => { }
 

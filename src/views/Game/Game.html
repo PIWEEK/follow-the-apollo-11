@@ -1,4 +1,5 @@
 <div class="game">
+
   <a-scene arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
     <a-assets>
       <a-asset-item id="helmet" src="img/models/helmet.gltf"></a-asset-item>
@@ -62,7 +63,9 @@
     <a-entity camera></a-entity>
   </a-scene>
 
+
   <transition name="anim-fade" mode="out-in">
     <router-view class="content" />
   </transition>
+
 </div>

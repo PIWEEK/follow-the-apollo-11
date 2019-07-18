@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 59.9 59.9">
+  <path fill="#ffd630" fill-opacity=".4" stroke="#ffd630" stroke-linecap="square" stroke-width="1.0847779999999998" d="M.8 30L29.9.7l29.2 29.1L30 59.1z" paint-order="markers fill stroke"/>
+  <g fill="#ffd630" transform="matrix(.91629 0 0 .77828 15.3 18)">
+    <path d="M29.7 25.6l-11-22a3 3 0 0 0-5.5 0l-10.9 22A3 3 0 0 0 5 30h22a3 3 0 0 0 2.7-4.4zm-1.9 2a1 1 0 0 1-.8.4H5a1 1 0 0 1-.9-.5 1 1 0 0 1 0-1l11-22a1 1 0 0 1 1.9 0l11 22a1 1 0 0 1-.2 1z"/>
+    <path d="M15 11h2v9h-2z"/>
+    <circle cx="16" cy="24" r="2"/>
+  </g>
+</svg>

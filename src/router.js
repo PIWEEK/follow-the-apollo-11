@@ -9,6 +9,7 @@ import RocketQuestion from './views/RocketQuestion/RocketQuestion.vue'
 import TrajectoryQuestion from './views/TrajectoryQuestion/TrajectoryQuestion.vue'
 import EagleQuestion from './views/EagleQuestion/EagleQuestion.vue'
 import MapQuestion from './views/MapQuestion/MapQuestion.vue'
+import ErrorQuestion from './views/ErrorQuestion/ErrorQuestion.vue'
 
 import Object3D from './views/Object3D.vue'
 import Certificate from './views/Certificate/Certificate.vue'
@@ -57,7 +58,13 @@ export default new Router({
           path: 'map-question',
           name: 'game:map:question',
           component: MapQuestion
+        },
+        {
+          path: 'error-question',
+          name: 'game:error:question',
+          component: ErrorQuestion
         }
+
       ]
     },
     {
