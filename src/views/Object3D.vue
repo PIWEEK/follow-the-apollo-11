@@ -10,6 +10,8 @@
         </a-asset-item>
         <a-asset-item id="helmet" src="img/models/helmet_animate.gltf" >
         </a-asset-item>
+        <a-asset-item id="trajectory" src="img/models/trajectory2.gltf" >
+        </a-asset-item>
       </a-assets>
 
       <a-marker type='pattern' url='img/markers/rocket.patt' v-pre>
@@ -31,6 +33,17 @@
       <a-marker type='pattern' url='img/markers/helmet.patt' v-pre>
         <a-gltf-model
           src="#helmet"
+          rotation="-90 0 0"
+          scale="1 1 1"
+          position="0 1 0"
+          animation_mixer="clip: *;"
+          >
+        </a-gltf-model>
+      </a-marker>
+
+      <a-marker type='pattern' url='img/markers/trajectory.patt' v-pre>
+        <a-gltf-model
+          src="#trajectory"
           rotation="-90 0 0"
           scale="1 1 1"
           position="0 1 0"
