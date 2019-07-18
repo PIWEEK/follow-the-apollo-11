@@ -11,10 +11,10 @@
     <button ref="cartografia" class="answer" v-on:click="checkAnswer('cartografia')"><svg-arrow class="arrow" /><span class="answer-text">Cartografía lunar</span></button>
   </div>
 
-  <transition name="anim-fade">
-    <div ref="nextStep" v-if="showNextStep">
-      <button class="startButton" v-on:click="goNext"><span>Date un paseo por la superficie lunar</span></button>
-    </div>
-  </transition>
+  <div ref="nextStep" class="nextStep">
+    <transition name="anim-fade">
+      <button class="startButton" v-on:click="goNext" v-if="showNextStep"><span>Date un paseo por la superficie lunar</span></button>
+    </transition>
+  </div>
 
 </div>

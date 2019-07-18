@@ -11,10 +11,10 @@
     <button ref="cine" class="answer" v-on:click="checkAnswer('cine')"><svg-arrow class="arrow" /><span class="answer-text">Alucinar</span></button>
   </div>
 
-  <transition name="anim-fade">
-    <div ref="nextStep" v-if="showNextStep">
-      <button class="startButton" v-on:click="goNext"><span>Prepárate para alunizar</span></button>
-    </div>
-  </transition>
+  <div ref="nextStep" class="nextStep">
+    <transition name="anim-fade">
+        <button class="startButton" v-on:click="goNext" v-if="showNextStep"><span>Prepárate para alunizar</span></button>
+    </transition>
+  </div>
 
 </div>

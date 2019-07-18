@@ -11,10 +11,10 @@
     <button ref="gca" class="answer" v-on:click="checkAnswer('gca')"><svg-arrow class="arrow" /><span class="answer-text">La Guerra de los 100 años</span></button>
   </div>
 
-  <transition name="anim-fade">
-    <div ref="nextStep" v-if="showNextStep">
-      <button class="startButton" v-on:click="goNext"><span>¡Abróchate los cinturones!</span></button>
-    </div>
-  </transition>
+  <div ref="nextStep" class="nextStep">
+    <transition name="anim-fade">
+      <button class="startButton" v-on:click="goNext" v-if="showNextStep"><span>¡Abróchate los cinturones!</span></button>
+    </transition>
+  </div>
 
 </div>

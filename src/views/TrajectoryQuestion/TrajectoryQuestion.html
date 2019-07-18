@@ -11,10 +11,10 @@
     <button ref="solar" class="answer" v-on:click="checkAnswer('solar')"><svg-arrow class="arrow" /><span class="answer-text">Solar Taxonomy Engaged and Monitoring</span></button>
   </div>
 
-  <transition name="anim-fade">
-    <div ref="nextStep" v-if="showNextStep">
-      <button class="startButton" v-on:click="goNext"><span>Dirígete a la Luna sin perderte</span></button>
-    </div>
-  </transition>
+  <div ref="nextStep" class="nextStep">
+    <transition name="anim-fade">
+      <button class="startButton" v-on:click="goNext" v-if="showNextStep"><span>Dirígete a la Luna sin perderte</span></button>
+    </transition>
+  </div>
 
 </div>
