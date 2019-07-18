@@ -1,7 +1,11 @@
-.intro > * {
-  margin-top: 2rem;
+.intro-text {
+  margin-top: 5rem;
+}
+
+.title {
+  width: 75%;
 }
 
 .start-button {
-  margin-top: 1rem;
+  margin-top: .5rem;
 }

@@ -4,11 +4,13 @@
 <script>
 import { mapMutations } from 'vuex'
 import TextBox from '@/components/TextBox/TextBox.vue'
+import titleSvg from '@/assets/svgs/title.svg'
 
 export default {
   name: 'Intro',
   components: {
-    'fta-textbox': TextBox
+    'fta-textbox': TextBox,
+    'svg-title': titleSvg
   },
   methods: {
     ...mapMutations({
