@@ -2,10 +2,15 @@
   <a-scene arjs="debugUIEnabled: false" vr-mode-ui="enabled: false">
     <a-assets>
       <a-asset-item id="helmet" src="img/models/helmet.gltf"></a-asset-item>
+      <a-asset-item id="helmet_animate" src="img/models/helmet_animate.gltf"></a-asset-item>
       <a-asset-item id="rocket" src="img/models/rocket.gltf"></a-asset-item>
+      <a-asset-item id="rocket_animate" src="img/models/rocket_animate.gltf"></a-asset-item>
       <a-asset-item id="trajectory" src="img/models/trajectory.gltf"></a-asset-item>
+      <a-asset-item id="trajectory_animate" src="img/models/trajectory_animate.gltf"></a-asset-item>
       <a-asset-item id="eagle" src="img/models/eagle.gltf"></a-asset-item>
+      <a-asset-item id="eagle_animate" src="img/models/eagle_animate.gltf"></a-asset-item>
       <a-asset-item id="map" src="img/models/map.gltf"></a-asset-item>
+      <a-asset-item id="map_animate" src="img/models/map_animate.gltf"></a-asset-item>
     </a-assets>
 
     <a-marker type="pattern" url="img/markers/helmet.patt" registerevents-helmet v-if="true || showHelmetMarker">
@@ -50,9 +55,9 @@
     </a-marker>
 
     <a-entity light="type: ambient; color: #ccc;"></a-entity>
-    <a-entity light="type: directional; color: #ccc; intensity: 3;" position="0 4 0"></a-entity>
-    <a-entity light="type: directional; color: #ccc; intensity: 2;" position="0 0 4"></a-entity>
-    <a-entity light="type: directional; color: #ccc; intensity: 2;" position="0 0 -4"></a-entity>
+    <a-entity light="type: directional; color: #ccc; intensity: 2.5;" position="0 14 0"></a-entity>
+    <a-entity light="type: directional; color: #ccc; intensity: 1.5;" position="0 0 14"></a-entity>
+    <a-entity light="type: directional; color: #ccc; intensity: 1.5;" position="0 0 -14"></a-entity>
 
     <a-entity camera></a-entity>
   </a-scene>
