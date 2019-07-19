@@ -31,14 +31,18 @@ export default {
           const marker = this.el
 
           const markerFound = () => {
-            setTimeout(() => {
-              cmp.nextStage()
-              cmp.$router.push({ name: 'game:helmet:question' })
-            }, 1500)
-            marker.removeEventListener('markerFound', markerFound)
+            if (cmp.showHelmetMarker) {
+              setTimeout(() => {
+                cmp.nextStage()
+                cmp.$router.push({ name: 'game:helmet:question' })
+              }, 1500)
+              marker.removeEventListener('markerFound', markerFound)
+            }
           }
           const markerLost = () => {
-            marker.object3D.visible = true
+            if (cmp.showHelmetMarker) {
+              marker.object3D.visible = true
+            }
           }
 
           EventBus.$on('closeHelmet', () => {
@@ -46,6 +50,8 @@ export default {
             marker.object3D.children[1].visible = true
             setTimeout(() => {
               marker.object3D.visible = false
+              marker.object3D.children[0].visible = true
+              marker.object3D.children[1].visible = false
               marker.removeEventListener('markerLost', markerLost)
             }, 1200)
           })
@@ -86,6 +92,8 @@ export default {
             marker.object3D.children[1].visible = true
             setTimeout(() => {
               marker.object3D.visible = false
+              marker.object3D.children[0].visible = true
+              marker.object3D.children[1].visible = false
               marker.removeEventListener('markerLost', markerLost)
             }, 1200)
           })
@@ -124,6 +132,8 @@ export default {
             marker.object3D.children[1].visible = true
             setTimeout(() => {
               marker.object3D.visible = false
+              marker.object3D.children[0].visible = true
+              marker.object3D.children[1].visible = false
               marker.removeEventListener('markerLost', markerLost)
             }, 1200)
           })
@@ -162,6 +172,8 @@ export default {
             marker.object3D.children[1].visible = true
             setTimeout(() => {
               marker.object3D.visible = false
+              marker.object3D.children[0].visible = true
+              marker.object3D.children[1].visible = false
               marker.removeEventListener('markerLost', markerLost)
             }, 1200)
           })
@@ -200,6 +212,8 @@ export default {
             marker.object3D.children[1].visible = true
             setTimeout(() => {
               marker.object3D.visible = false
+              marker.object3D.children[0].visible = true
+              marker.object3D.children[1].visible = false
               marker.removeEventListener('markerLost', markerLost)
             }, 1200)
           })
