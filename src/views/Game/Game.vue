@@ -59,7 +59,7 @@ export default {
               marker.removeEventListener('markerFound', markerFound)
             } else {
               cmp.$router.push({ name: 'game:error:question' })
-              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 2000)
+              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 4000)
             }
           }
           const markerLost = () => { }
@@ -84,7 +84,7 @@ export default {
               marker.removeEventListener('markerFound', markerFound)
             } else {
               cmp.$router.push({ name: 'game:error:question' })
-              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 2000)
+              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 4000)
             }
           }
           const markerLost = () => { }
@@ -109,7 +109,7 @@ export default {
               marker.removeEventListener('markerFound', markerFound)
             } else {
               cmp.$router.push({ name: 'game:error:question' })
-              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 2000)
+              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 4000)
             }
           }
           const markerLost = () => { }
@@ -134,7 +134,7 @@ export default {
               marker.removeEventListener('markerFound', markerFound)
             } else {
               cmp.$router.push({ name: 'game:error:question' })
-              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 2000)
+              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 4000)
             }
           }
           const markerLost = () => { }
