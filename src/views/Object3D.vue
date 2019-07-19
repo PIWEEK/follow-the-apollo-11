@@ -1,7 +1,7 @@
 <template>
   <div class="object3D">
     <p>Tip: Ctrl + Alt + i</p>
-    <a-scene light="defaultLightsEnabled: false">
+    <a-scene>
 
       <a-assets>
         <a-asset-item id="rocket" src="img/models/rocket.gltf" >
@@ -28,18 +28,16 @@
 
       <a-marker type='pattern' url='img/markers/rocket.patt' v-pre registerevents-rocket>
         <a-gltf-model
-          name="static"
           src="#rocket"
           rotation="-90 0 0"
-          scale="1 1 1"
+          scale="1 .5 1"
           position="0 1 0"
           visible="true"></a-gltf-model>
 
         <a-gltf-model
-          name="animate"
           src="#rocket_animate"
           rotation="-90 0 0"
-          scale="1 1 1"
+          scale="1 .5 1"
           position="0 1 0"
           animation-mixer
           visible="false"
@@ -52,13 +50,13 @@
           src="#eagle"
           rotation="-90 0 0"
           position="0 2 0"
-          scale="1 1 1"></a-gltf-model>
+          scale="1 .5 1"></a-gltf-model>
       </a-marker> -->
 
       <!-- <a-gltf-model
         src="#eagle_animate"
         rotation="0 0 0"
-        scale="1 1 1"
+        scale="1 .5 1"
         position="0 1 -10"
         animation-mixer
         >
@@ -68,7 +66,7 @@
         <a-gltf-model
           src="#helmet"
          rotation="-90 0 0"
-          scale="1 1 1"
+          scale="1 .5 1"
           position="0 1 0">
         </a-gltf-model>
       </a-marker> -->
@@ -76,7 +74,7 @@
       <!-- <a-gltf-model
         src="#helmet_animate"
         rotation="0 0 0"
-        scale="1 1 1"
+        scale="1 .5 1"
         position="0 1 -10"
         animation-mixer
         >
@@ -86,7 +84,7 @@
         <a-gltf-model
           src="#trajectory"
           rotation="-90 0 0"
-          scale="1 1 1"
+          scale="1 .5 1"
           position="0 1 0"
           >
         </a-gltf-model>
@@ -95,7 +93,7 @@
       <!-- <a-gltf-model
         src="#trajectory_animate"
         rotation="0 0 0"
-        scale="1 1 1"
+        scale="1 .5 1"
         position="0 1 -10"
         animation-mixer
         >
@@ -105,7 +103,7 @@
         <a-gltf-model
           src="#map"
           rotation="-65 0 0"
-          scale="1 1 1"
+          scale="1 0.5 0.5"
           position="0 1 0"
           >
         </a-gltf-model>
@@ -114,7 +112,7 @@
       <!-- <a-gltf-model
         src="#map_animate"
         rotation="0 0 0"
-        scale="1 1 1"
+        scale="1 0.5 0.5"
         position="0 1 -10"
         animation-mixer
         >
