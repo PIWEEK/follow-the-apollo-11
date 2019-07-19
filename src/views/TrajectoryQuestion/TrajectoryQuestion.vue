@@ -6,6 +6,7 @@ import { mapMutations } from 'vuex'
 import TextBox from '@/components/TextBox/TextBox.vue'
 import arrowSvg from '@/assets/svgs/arrow.svg'
 import questionSvg from '@/assets/svgs/question.svg'
+import { EventBus } from '@/main'
 
 export default {
   name: 'TrajectoryQuestion',
@@ -33,6 +34,7 @@ export default {
       this.showNextStep = true
     },
     goNext () {
+      EventBus.$emit('closeTrajectory')
       this.nextStage()
       this.addTrajectoryToInventory()
       this.$router.push({ name: 'game:find' })

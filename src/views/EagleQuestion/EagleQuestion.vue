@@ -6,6 +6,7 @@ import { mapMutations } from 'vuex'
 import TextBox from '@/components/TextBox/TextBox.vue'
 import arrowSvg from '@/assets/svgs/arrow.svg'
 import questionSvg from '@/assets/svgs/question.svg'
+import { EventBus } from '@/main'
 
 export default {
   name: 'EagleQuestion',
@@ -33,6 +34,7 @@ export default {
       this.showNextStep = true
     },
     goNext () {
+      EventBus.$emit('closeEagle')
       this.nextStage()
       this.addEagleToInventory()
       this.$router.push({ name: 'game:find' })

@@ -4,6 +4,7 @@
 <script>
 import { mapGetters, mapMutations } from 'vuex'
 import TextBox from '@/components/TextBox/TextBox.vue'
+import { EventBus } from '@/main'
 
 export default {
   name: 'Game',
@@ -36,7 +37,18 @@ export default {
             }, 1500)
             marker.removeEventListener('markerFound', markerFound)
           }
-          const markerLost = () => { }
+          const markerLost = () => {
+            marker.object3D.visible = true
+          }
+
+          EventBus.$on('closeHelmet', () => {
+            marker.object3D.children[0].visible = false
+            marker.object3D.children[1].visible = true
+            setTimeout(() => {
+              marker.object3D.visible = false
+              marker.removeEventListener('markerLost', markerLost)
+            }, 1200)
+          })
 
           marker.addEventListener('markerFound', markerFound)
           marker.addEventListener('markerLost', markerLost)
@@ -55,14 +67,28 @@ export default {
                 cmp.nextStage()
                 cmp.$router.push({ name: 'game:rocket:question' })
               }, 1500)
-
               marker.removeEventListener('markerFound', markerFound)
             } else {
               cmp.$router.push({ name: 'game:error:question' })
-              setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 4000)
+              setTimeout(() => {
+                cmp.$router.push({ name: 'game:find' })
+              }, 4000)
             }
           }
-          const markerLost = () => { }
+          const markerLost = () => {
+            if (cmp.showRocketMarker) {
+              marker.object3D.visible = true
+            }
+          }
+
+          EventBus.$on('closeRocket', () => {
+            marker.object3D.children[0].visible = false
+            marker.object3D.children[1].visible = true
+            setTimeout(() => {
+              marker.object3D.visible = false
+              marker.removeEventListener('markerLost', markerLost)
+            }, 1200)
+          })
 
           marker.addEventListener('markerFound', markerFound)
           marker.addEventListener('markerLost', markerLost)
@@ -87,7 +113,20 @@ export default {
               setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 4000)
             }
           }
-          const markerLost = () => { }
+          const markerLost = () => {
+            if (cmp.showTrajectoryMarker) {
+              marker.object3D.visible = true
+            }
+          }
+
+          EventBus.$on('closeTrajectory', () => {
+            marker.object3D.children[0].visible = false
+            marker.object3D.children[1].visible = true
+            setTimeout(() => {
+              marker.object3D.visible = false
+              marker.removeEventListener('markerLost', markerLost)
+            }, 1200)
+          })
 
           marker.addEventListener('markerFound', markerFound)
           marker.addEventListener('markerLost', markerLost)
@@ -112,7 +151,20 @@ export default {
               setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 4000)
             }
           }
-          const markerLost = () => { }
+          const markerLost = () => {
+            if (cmp.showEagleMarker) {
+              marker.object3D.visible = true
+            }
+          }
+
+          EventBus.$on('closeEagle', () => {
+            marker.object3D.children[0].visible = false
+            marker.object3D.children[1].visible = true
+            setTimeout(() => {
+              marker.object3D.visible = false
+              marker.removeEventListener('markerLost', markerLost)
+            }, 1200)
+          })
 
           marker.addEventListener('markerFound', markerFound)
           marker.addEventListener('markerLost', markerLost)
@@ -137,7 +189,20 @@ export default {
               setTimeout(() => { cmp.$router.push({ name: 'game:find' }) }, 4000)
             }
           }
-          const markerLost = () => { }
+          const markerLost = () => {
+            if (cmp.showMapMarker) {
+              marker.object3D.visible = true
+            }
+          }
+
+          EventBus.$on('closeMap', () => {
+            marker.object3D.children[0].visible = false
+            marker.object3D.children[1].visible = true
+            setTimeout(() => {
+              marker.object3D.visible = false
+              marker.removeEventListener('markerLost', markerLost)
+            }, 1200)
+          })
 
           marker.addEventListener('markerFound', markerFound)
           marker.addEventListener('markerLost', markerLost)
