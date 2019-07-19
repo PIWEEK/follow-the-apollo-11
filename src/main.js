@@ -15,7 +15,7 @@ Vue.config.ignoredElements = [
   'a-gltf-model',
   'a-marker'
 ]
-new Vue({
+export const EventBus = new Vue({
   router,
   store,
   render: h => h(App)

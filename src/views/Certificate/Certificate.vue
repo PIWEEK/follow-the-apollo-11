@@ -9,32 +9,34 @@ import congratulationsSvg from '@/assets/svgs/congratulations.svg'
 export default {
   name: 'Certificate',
   data: () => ({
-    astroName: '',
-    showCertificate: false
+    astroName: ''
   }),
   components: {
     'fta-textbox': TextBox,
     'svg-congratulations': congratulationsSvg,
     'svg-certificate': certificateSvg
   },
+  mounted () {
+    const now = new Date()
+    const today = new Intl.DateTimeFormat('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }).format(now)
+    this.$refs.certificate.children[20].children[0].textContent = today
+    this.$refs.certificateHidden.children[20].children[0].textContent = today
+  },
   methods: {
     generateCertificate () {
-      const now = new Date()
-      const today = now.toLocaleDateString()
-      this.showCertificate = true
       this.$refs.certificate.children[8].children[0].textContent = this.astroName
-      this.$refs.certificate.children[20].children[0].textContent = today
+      this.$refs.certificateHidden.children[8].children[0].textContent = this.astroName
 
-      this._generateAndDownloadPngFromSvg(this.$refs.certificate)
+      this._generateAndDownloadPngFromSvg(this.$refs.certificateHidden)
     },
     _generateAndDownloadPngFromSvg (svg) {
       var canvas = document.createElement('canvas')
       var svgSize = svg.getBoundingClientRect()
-      console.log('SVG', svg)
       canvas.width = svgSize.width
       canvas.height = svgSize.height
       canvas.style.width = svgSize.width
       canvas.style.height = svgSize.height
+      console.log('SVG', svgSize.within, svgSize.height)
       svg.setAttribute('height', canvas.height)
       svg.setAttribute('width', canvas.width)
       var ctx = canvas.getContext('2d')

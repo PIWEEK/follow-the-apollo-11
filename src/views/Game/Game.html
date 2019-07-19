@@ -20,7 +20,14 @@
         rotation="-90 0 0"
         scale="1 1 1"
         position="0 1 0"
-        animation_mixer="clip: *;"></a-gltf-model>
+        visible="true"></a-gltf-model>
+      <a-gltf-model
+        src="#helmet_animate"
+        rotation="-90 0 0"
+        scale="1 1 1"
+        position="0 1 0"
+        animation-mixer
+        visible="false"></a-gltf-model>
     </a-marker>
 
     <a-marker type="pattern" url="img/markers/rocket.patt" registerevents-rocket v-if="true || showRocketMarker">
@@ -29,6 +36,13 @@
         rotation="-90 0 0"
         scale="1 1 1"
         position="0 1 0"></a-gltf-model>
+      <a-gltf-model
+        src="#rocket_animate"
+        rotation="-90 0 0"
+        scale="1 1 1"
+        position="0 1 0"
+        animation-mixer
+        visible="false"></a-gltf-model>
     </a-marker>
 
     <a-marker type="pattern" url="img/markers/trajectory.patt" registerevents-trajectory v-if="true || showTrajectoryMarker">
@@ -37,6 +51,13 @@
         rotation="-90 0 0"
         scale="1 1 1"
         position="0 1 0"></a-gltf-model>
+      <a-gltf-model
+        src="#trajectory_animate"
+        rotation="-90 0 0"
+        scale="1 1 1"
+        position="0 1 0"
+        animation-mixer
+        visible="false"></a-gltf-model>
     </a-marker>
 
     <a-marker type="pattern" url="img/markers/eagle.patt" registerevents-eagle v-if="true || showEagleMarker">
@@ -45,6 +66,13 @@
         rotation="-90 0 0"
         position="0 2 0"
         scale="1 1 1"></a-gltf-model>
+      <a-gltf-model
+        src="#eagle_animate"
+        rotation="-90 0 0"
+        scale="1 1 1"
+        position="0 1 0"
+        animation-mixer
+        visible="false"></a-gltf-model>
     </a-marker>
 
     <a-marker type="pattern" url="img/markers/map.patt" registerevents-map v-if="true || showMapMarker">
@@ -53,6 +81,13 @@
         rotation="-65 0 0"
         scale="1 1 1"
         position="0 1 0"></a-gltf-model>
+      <a-gltf-model
+        src="#map_animate"
+        rotation="-90 0 0"
+        scale="1 1 1"
+        position="0 1 0"
+        animation-mixer
+        visible="false"></a-gltf-model>
     </a-marker>
 
     <a-entity light="type: ambient; color: #ccc;"></a-entity>
