@@ -39,3 +39,9 @@
   margin-bottom: 4rem;
 }
 
+.diploma-hidden {
+  position: fixed;
+  bottom: -1000rem;
+  width: 2000px;
+}
+
