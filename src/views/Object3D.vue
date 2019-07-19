@@ -26,30 +26,34 @@
         </a-asset-item>
       </a-assets>
 
-      <a-marker type='pattern' url='img/markers/rocket.patt' v-pre>
+      <a-marker type='pattern' url='img/markers/rocket.patt' v-pre registerevents-rocket>
         <a-gltf-model
+          name="static"
           src="#rocket"
           rotation="-90 0 0"
           scale="1 1 1"
-          position="0 1 0"></a-gltf-model>
+          position="0 1 0"
+          visible="true"></a-gltf-model>
+
+        <a-gltf-model
+          name="animate"
+          src="#rocket_animate"
+          rotation="-90 0 0"
+          scale="1 1 1"
+          position="0 1 0"
+          animation-mixer
+          visible="false"
+          >
+        </a-gltf-model>
       </a-marker>
 
-      <!-- <a-gltf-model
-        src="#rocket_animate"
-        rotation="0 0 0"
-        scale="1 1 1"
-        position="0 1 -10"
-        animation-mixer
-        >
-      </a-gltf-model> -->
-
-      <a-marker type='pattern' url='img/markers/eagle.patt' v-pre>
+      <!-- <a-marker type='pattern' url='img/markers/eagle.patt' v-pre>
         <a-gltf-model
           src="#eagle"
           rotation="-90 0 0"
           position="0 2 0"
           scale="1 1 1"></a-gltf-model>
-      </a-marker>
+      </a-marker> -->
 
       <!-- <a-gltf-model
         src="#eagle_animate"
@@ -60,14 +64,14 @@
         >
       </a-gltf-model> -->
 
-      <a-marker type='pattern' url='img/markers/helmet.patt' v-pre>
+      <!-- <a-marker type='pattern' url='img/markers/helmet.patt' v-pre>
         <a-gltf-model
           src="#helmet"
          rotation="-90 0 0"
           scale="1 1 1"
           position="0 1 0">
         </a-gltf-model>
-      </a-marker>
+      </a-marker> -->
 
       <!-- <a-gltf-model
         src="#helmet_animate"
@@ -78,7 +82,7 @@
         >
       </a-gltf-model> -->
 
-      <a-marker type='pattern' url='img/markers/trajectory.patt' v-pre>
+      <!-- <a-marker type='pattern' url='img/markers/trajectory.patt' v-pre>
         <a-gltf-model
           src="#trajectory"
           rotation="-90 0 0"
@@ -86,7 +90,7 @@
           position="0 1 0"
           >
         </a-gltf-model>
-      </a-marker>
+      </a-marker> -->
 
       <!-- <a-gltf-model
         src="#trajectory_animate"
@@ -97,7 +101,7 @@
         >
       </a-gltf-model> -->
 
-      <a-marker type='pattern' url='img/markers/map.patt' v-pre>
+      <!-- <a-marker type='pattern' url='img/markers/map.patt' v-pre>
         <a-gltf-model
           src="#map"
           rotation="-65 0 0"
@@ -105,7 +109,7 @@
           position="0 1 0"
           >
         </a-gltf-model>
-      </a-marker>
+      </a-marker> -->
 
       <!-- <a-gltf-model
         src="#map_animate"
@@ -129,7 +133,34 @@
 
 <script>
 export default {
-  name: 'object3D'
+  name: 'object3D',
+  mounted () {
+    // rocket
+    window.AFRAME.registerComponent(
+      'registerevents-rocket', {
+        init: function () {
+          const marker = this.el
+
+          const markerFound = () => {
+            marker.removeEventListener('markerFound', markerFound)
+          }
+          const markerLost = () => {
+            marker.object3D.visible = true
+            marker.object3D.children[0].visible = false
+            marker.object3D.children[1].visible = true
+
+            setTimeout(() => {
+              marker.object3D.visible = false
+              marker.removeEventListener('markerLost', markerLost)
+            }, 1200)
+          }
+
+          marker.addEventListener('markerFound', markerFound)
+          marker.addEventListener('markerLost', markerLost)
+        }
+      }
+    )
+  }
 }
 </script>
 
