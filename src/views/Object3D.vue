@@ -34,14 +34,14 @@
           position="0 1 0"></a-gltf-model>
       </a-marker>
 
-      <a-gltf-model
+      <!-- <a-gltf-model
         src="#rocket_animate"
         rotation="0 0 0"
         scale="1 1 1"
         position="0 1 -10"
         animation-mixer
         >
-      </a-gltf-model>
+      </a-gltf-model> -->
 
       <a-marker type='pattern' url='img/markers/eagle.patt' v-pre>
         <a-gltf-model
@@ -51,14 +51,14 @@
           scale="1 1 1"></a-gltf-model>
       </a-marker>
 
-      <a-gltf-model
+      <!-- <a-gltf-model
         src="#eagle_animate"
         rotation="0 0 0"
         scale="1 1 1"
         position="0 1 -10"
         animation-mixer
         >
-      </a-gltf-model>
+      </a-gltf-model> -->
 
       <a-marker type='pattern' url='img/markers/helmet.patt' v-pre>
         <a-gltf-model
@@ -69,14 +69,14 @@
         </a-gltf-model>
       </a-marker>
 
-      <a-gltf-model
+      <!-- <a-gltf-model
         src="#helmet_animate"
         rotation="0 0 0"
         scale="1 1 1"
         position="0 1 -10"
         animation-mixer
         >
-      </a-gltf-model>
+      </a-gltf-model> -->
 
       <a-marker type='pattern' url='img/markers/trajectory.patt' v-pre>
         <a-gltf-model
@@ -88,14 +88,14 @@
         </a-gltf-model>
       </a-marker>
 
-      <a-gltf-model
+      <!-- <a-gltf-model
         src="#trajectory_animate"
         rotation="0 0 0"
         scale="1 1 1"
         position="0 1 -10"
         animation-mixer
         >
-      </a-gltf-model>
+      </a-gltf-model> -->
 
       <a-marker type='pattern' url='img/markers/map.patt' v-pre>
         <a-gltf-model
@@ -107,14 +107,14 @@
         </a-gltf-model>
       </a-marker>
 
-      <a-gltf-model
+      <!-- <a-gltf-model
         src="#map_animate"
         rotation="0 0 0"
         scale="1 1 1"
         position="0 1 -10"
         animation-mixer
         >
-      </a-gltf-model>
+      </a-gltf-model> -->
 
       <a-entity light="type: ambient; color: #ccc;"></a-entity>
       <a-entity light="type: directional; color: #ccc; intensity: 2.5;" position="0 14 0"></a-entity>
