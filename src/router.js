@@ -4,11 +4,9 @@ import Router from 'vue-router'
 import Game from './views/Game/Game.vue'
 import Intro from './views/Intro/Intro.vue'
 import Find from './views/Find/Find.vue'
-import HelmetQuestion from './views/HelmetQuestion/HelmetQuestion.vue'
-import RocketQuestion from './views/RocketQuestion/RocketQuestion.vue'
-import TrajectoryQuestion from './views/TrajectoryQuestion/TrajectoryQuestion.vue'
-import EagleQuestion from './views/EagleQuestion/EagleQuestion.vue'
-import MapQuestion from './views/MapQuestion/MapQuestion.vue'
+
+import questions from './questions'
+import Question from './views/Question/Question.vue'
 import ErrorQuestion from './views/ErrorQuestion/ErrorQuestion.vue'
 
 import Object3D from './views/Object3D.vue'
@@ -37,27 +35,32 @@ export default new Router({
         {
           path: 'helmet-question',
           name: 'game:helmet:question',
-          component: HelmetQuestion
+          component: Question,
+          props: { question: questions.helmet }
         },
         {
           path: 'rocket-question',
           name: 'game:rocket:question',
-          component: RocketQuestion
+          component: Question,
+          props: { question: questions.rocket }
         },
         {
           path: 'trajectory-question',
           name: 'game:trajectory:question',
-          component: TrajectoryQuestion
+          component: Question,
+          props: { question: questions.trajectory }
         },
         {
           path: 'eagle-question',
           name: 'game:eagle:question',
-          component: EagleQuestion
+          component: Question,
+          props: { question: questions.eagle }
         },
         {
           path: 'map-question',
           name: 'game:map:question',
-          component: MapQuestion
+          component: Question,
+          props: { question: questions.map }
         },
         {
           path: 'error-question',

@@ -20,6 +20,10 @@ export default {
     'svg-congratulations': congratulationsSvg,
     'svg-certificate': certificateSvg
   },
+  mounted () {
+    // Remove the camera
+    document.getElementsByTagName('video')[0].remove()
+  },
   methods: {
     generateCertificate () {
       this.showCertificate = true

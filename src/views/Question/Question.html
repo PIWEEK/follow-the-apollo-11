@@ -1,0 +1,26 @@
+<div class="question" v-if="question">
+  <svg-question class="question-icon" />
+
+  <fta-textbox>
+    <p>{{ question.question }}</p>
+  </fta-textbox>
+
+  <div class="answers">
+    <button
+      class="answer"
+      v-for="answer in question.answers"
+      :ref="answer.key"
+      v-on:click="checkAnswer(answer)">
+      <svg-arrow class="arrow" />
+      <span class="answer-text">{{ answer.text }}</span>
+    </button>
+  </div>
+
+  <div class="nextStep">
+    <transition name="anim-fade">
+      <button class="startButton" v-if="showNextStep" v-on:click="goNext">
+        <span>{{ question.nextStep.msg }}</span>
+      </button>
+    </transition>
+  </div>
+</div>
