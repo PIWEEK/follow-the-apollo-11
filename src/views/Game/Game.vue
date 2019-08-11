@@ -46,14 +46,8 @@ export default {
           }
 
           EventBus.$on('closeHelmet', () => {
-            marker.object3D.children[0].visible = false
-            marker.object3D.children[1].visible = true
-            setTimeout(() => {
-              marker.object3D.visible = false
-              marker.object3D.children[0].visible = true
-              marker.object3D.children[1].visible = false
-              marker.removeEventListener('markerLost', markerLost)
-            }, 1200)
+            marker.object3D.visible = false
+            marker.removeEventListener('markerLost', markerLost)
           })
 
           marker.addEventListener('markerFound', markerFound)
@@ -88,14 +82,8 @@ export default {
           }
 
           EventBus.$on('closeRocket', () => {
-            marker.object3D.children[0].visible = false
-            marker.object3D.children[1].visible = true
-            setTimeout(() => {
-              marker.object3D.visible = false
-              marker.object3D.children[0].visible = true
-              marker.object3D.children[1].visible = false
-              marker.removeEventListener('markerLost', markerLost)
-            }, 1200)
+            marker.object3D.visible = false
+            marker.removeEventListener('markerLost', markerLost)
           })
 
           marker.addEventListener('markerFound', markerFound)
@@ -128,14 +116,8 @@ export default {
           }
 
           EventBus.$on('closeTrajectory', () => {
-            marker.object3D.children[0].visible = false
-            marker.object3D.children[1].visible = true
-            setTimeout(() => {
-              marker.object3D.visible = false
-              marker.object3D.children[0].visible = true
-              marker.object3D.children[1].visible = false
-              marker.removeEventListener('markerLost', markerLost)
-            }, 1200)
+            marker.object3D.visible = false
+            marker.removeEventListener('markerLost', markerLost)
           })
 
           marker.addEventListener('markerFound', markerFound)
@@ -168,14 +150,8 @@ export default {
           }
 
           EventBus.$on('closeEagle', () => {
-            marker.object3D.children[0].visible = false
-            marker.object3D.children[1].visible = true
-            setTimeout(() => {
-              marker.object3D.visible = false
-              marker.object3D.children[0].visible = true
-              marker.object3D.children[1].visible = false
-              marker.removeEventListener('markerLost', markerLost)
-            }, 1200)
+            marker.object3D.visible = false
+            marker.removeEventListener('markerLost', markerLost)
           })
 
           marker.addEventListener('markerFound', markerFound)
@@ -208,14 +184,8 @@ export default {
           }
 
           EventBus.$on('closeMap', () => {
-            marker.object3D.children[0].visible = false
-            marker.object3D.children[1].visible = true
-            setTimeout(() => {
-              marker.object3D.visible = false
-              marker.object3D.children[0].visible = true
-              marker.object3D.children[1].visible = false
-              marker.removeEventListener('markerLost', markerLost)
-            }, 1200)
+            marker.object3D.visible = false
+            marker.removeEventListener('markerLost', markerLost)
           })
 
           marker.addEventListener('markerFound', markerFound)
