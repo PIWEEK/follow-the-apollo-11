@@ -1,19 +1,24 @@
 <div class="certificate">
   <svg-congratulations class="congratulations" />
 
-  <fta-textbox>
-    <p>Has llegado hasta el final de la Misión Apolo, gracias a la ayuda de hombres y mujeres increíbles</p>
-    <p>Pon tu nombre y recibe tu diploma por cumplir la misión</p>
-  </fta-textbox>
-
-  <form class="form-certificate" @submit.prevent="generateCertificate">
+  <form class="form-certificate" v-show="!showCertificate" @submit.prevent="generateCertificate">
+    <fta-textbox class="explanation">
+      <p>Has llegado hasta el final de la Misión Apolo, gracias a la ayuda de hombres y mujeres increíbles</p>
+      <p>Pon tu nombre y recibe tu diploma por cumplir la misión</p>
+    </fta-textbox>
     <input type="text" class="inputCertificate" v-model="astroName" required placeholder="p.e.: Neil..." />
     <button class="startButton" type="submit"><span>Consigue tu diploma</span></button>
   </form>
 
-  <div class="diploma">
-    <svg-certificate ref="certificate" id="certificate" />
-  </div>
+  <transition name="anim-fade" mode="out-in">
+    <div class="diploma" v-show="showCertificate">
+      <fta-textbox class="credits">
+        <p><strong>El Viaje del Apolo 11</strong> es un proyecto hecho con <a class="love" href="https://www.youtube.com/watch?v=5SSDTx_b2b8" target="_blank">❤️</a> y Open Source durante la XVI <a href="https://piweek.com/" target="_blank">ΠWEEK</a> de <a href="https://kaleidos.net" target="_blank">Kaleidos</a> para <a href="https://fundacionastrohita.org" target="_blank">AstroHita</a>.</p>
+        <p>La tripulación de esta nave está compuesta por Yamila Moreno, María Cano-Cortés, Juan de la Cruz y David Barragán Merino.</p>
+      </fta-textbox>
+      <svg-certificate ref="certificate" id="certificate" />
+    </div>
+  </transition>
 
   <!-- To render the diploma correctly -->
   <div class="diploma-hidden">

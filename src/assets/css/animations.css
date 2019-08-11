@@ -38,3 +38,9 @@
   animation: bounce-in .5s reverse;
 }
 
+/*
+ * Beat
+ */
+@keyframes beat{
+	to { transform: scale(1.4); }
+}

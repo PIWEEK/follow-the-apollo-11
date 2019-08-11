@@ -9,22 +9,24 @@ import congratulationsSvg from '@/assets/svgs/congratulations.svg'
 export default {
   name: 'Certificate',
   data: () => ({
-    astroName: ''
+    showCertificate: false,
+    astroName: '',
+    today: new Intl
+      .DateTimeFormat('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })
+      .format(new Date())
   }),
   components: {
     'fta-textbox': TextBox,
     'svg-congratulations': congratulationsSvg,
     'svg-certificate': certificateSvg
   },
-  mounted () {
-    const now = new Date()
-    const today = new Intl.DateTimeFormat('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }).format(now)
-    this.$refs.certificate.children[20].children[0].textContent = today
-    this.$refs.certificateHidden.children[20].children[0].textContent = today
-  },
   methods: {
     generateCertificate () {
+      this.showCertificate = true
+
+      this.$refs.certificate.children[20].children[0].textContent = this.today
       this.$refs.certificate.children[8].children[0].textContent = this.astroName
+      this.$refs.certificateHidden.children[20].children[0].textContent = this.today
       this.$refs.certificateHidden.children[8].children[0].textContent = this.astroName
 
       this._generateAndDownloadPngFromSvg(this.$refs.certificateHidden)

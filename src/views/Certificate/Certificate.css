@@ -24,6 +24,10 @@
   flex-direction: column;
   justify-content: center;
 
+  & .explanation {
+    margin: 2rem 0;
+  }
+
   &.inputCertificate {
     width: 100%;
   }
@@ -36,7 +40,18 @@
 
 .diploma {
   width: 90vw;
-  margin-bottom: 4rem;
+
+  & .credits {
+    color: var(--black);
+    margin-bottom: 3rem;
+
+    & .love {
+      animation: beat .50s infinite alternate;
+      color: var(--red-400);
+      display: inline-block;
+      text-decoration: none;
+    }
+  }
 }
 
 .diploma-hidden {
@@ -44,4 +59,3 @@
   bottom: -1000rem;
   width: 2000px;
 }
-
