@@ -1,3 +1,8 @@
+.question-icon {
+  width: 4rem;
+  margin-bottom: 1rem;
+}
+
 .answers {
   display: flex;
   flex-direction: column;
@@ -37,11 +42,6 @@
   &.answer-error {
     background: var(--red-400-60);
   }
-}
-
-.question-icon {
-  width: 4rem;
-  margin-bottom: 1rem;
 }
 
 .nextStep {
