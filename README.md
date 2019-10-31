@@ -12,6 +12,7 @@ Charla y demo en la
 [#PEUMConf2019](https://www.programaresunamierda.com/p/peumconf-2019.html)
 
 [AR, ThreeJS & VueJS: Del papel a la realidad aumentada](https://youtu.be/avpPkJF5SJM)
+
 [![AR, ThreeJS & VueJS: Del papel a la realidad aumentada](/posters/video_thumb.png)](https://youtu.be/avpPkJF5SJM)
 
 [El viaje del Apolo](https://blog.kaleidos.net/El-viaje-del-Apolo/) en el Blog de Kaleidos
