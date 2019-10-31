@@ -1,6 +1,6 @@
 ![El Viaje del Apolo 11](/title.png)
 
-El Viaje del Apolo 11 es un juego interactivo desarrollado durante la XVI PIWEEK de Kaleidos, un evento de innovación y software libre, en colaboración con AstroHita. Con este juego queremos que conozcas la misión que llevó al ser humano a la Luna a través de la realidad aumentada y unas preguntas (!las respuestas están en los pósters!). Te presentaremos a algunas protagonistas que hicieron posible este logro para la ciencia y para la humanidad.
+El Viaje del Apolo 11 es un juego interactivo desarrollado durante la XVI PIWEEK de Kaleidos, un evento de innovación y software libre, en colaboración con AstroHita. Con este juego queremos que conozcas la misión que llevó al ser humano a la Luna a través de la realidad aumentada y unas preguntas (¡las respuestas están en los pósters!). Te presentaremos a algunas protagonistas que hicieron posible este logro para la ciencia y para la humanidad.
 
 # El juego
 
@@ -8,7 +8,13 @@ El Viaje del Apolo 11 es un juego interactivo desarrollado durante la XVI PIWEEK
 
 # Cómo se hizo
 
+Charla y demo en la
+[#PEUMConf2019](https://www.programaresunamierda.com/p/peumconf-2019.html)
+
 [AR, ThreeJS & VueJS: Del papel a la realidad aumentada](https://youtu.be/avpPkJF5SJM)
+[![AR, ThreeJS & VueJS: Del papel a la realidad aumentada](/posters/video_thumb.png)](https://youtu.be/avpPkJF5SJM)
+
+[El viaje del Apolo](https://blog.kaleidos.net/El-viaje-del-Apolo/) en el Blog de Kaleidos
 
 # Los pósters
 
