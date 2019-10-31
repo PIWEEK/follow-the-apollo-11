@@ -29,30 +29,30 @@ Charla y demo en la
 
 # Instalación
 
-## Project setup
+## Instalación del proyecto
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Desarrollo
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Producción
 ```
 npm run build
 ```
 
-### Run your tests
+### Tests
 ```
 npm run test
 ```
 
-### Lints and fixes files
+### Linters
 ```
 npm run lint
 ```
 
-### Customize configuration
+### Configuración específica de Vue
 See [Configuration Reference](https://cli.vuejs.org/config/).
