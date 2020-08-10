@@ -1,0 +1,432 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v0.9.35",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                2,
+                3,
+                4
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "Light",
+            "rotation" : [
+                0.16907575726509094,
+                0.7558803558349609,
+                -0.27217137813568115,
+                0.570947527885437
+            ],
+            "translation" : [
+                4.076245307922363,
+                5.903861999511719,
+                -1.0054539442062378
+            ]
+        },
+        {
+            "name" : "Camera",
+            "rotation" : [
+                0.483536034822464,
+                0.33687159419059753,
+                -0.20870360732078552,
+                0.7804827094078064
+            ],
+            "translation" : [
+                7.358891487121582,
+                4.958309173583984,
+                6.925790786743164
+            ]
+        },
+        {
+            "name" : "Camera.001",
+            "rotation" : [
+                0.8937963247299194,
+                0.09062855690717697,
+                -0.3857799172401428,
+                0.20997287333011627
+            ],
+            "translation" : [
+                6.136789321899414,
+                6.793060302734375,
+                6.89210844039917
+            ]
+        },
+        {
+            "name" : "Spot",
+            "rotation" : [
+                0.9564052224159241,
+                0.024510135874152184,
+                -0.11445166170597076,
+                0.2675617039203644
+            ],
+            "translation" : [
+                5.0763750076293945,
+                10.03152084350586,
+                12.233330726623535
+            ]
+        },
+        {
+            "mesh" : 0,
+            "name" : "Astronaut_mesh_1_2",
+            "rotation" : [
+                0,
+                0,
+                0,
+                23.799999237060547
+            ]
+        },
+        {
+            "mesh" : 0,
+            "name" : "Astronaut_mesh_1_2",
+            "rotation" : [
+                0,
+                0,
+                0,
+                23.799999237060547
+            ]
+        }
+    ],
+    "animations" : [
+        {
+            "channels" : [
+                {
+                    "sampler" : 0,
+                    "target" : {
+                        "node" : 5,
+                        "path" : "translation"
+                    }
+                }
+            ],
+            "name" : "Astronaut_mesh_1_2Action.003",
+            "samplers" : [
+                {
+                    "input" : 15,
+                    "interpolation" : "LINEAR",
+                    "output" : 16
+                }
+            ]
+        }
+    ],
+    "materials" : [
+        {
+            "doubleSided" : true,
+            "name" : "white",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.20190156996250153,
+                    0.20190156996250153,
+                    0.20190156996250153,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "helmet.001",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0.21804861724376678,
+                    0.26241087913513184,
+                    0.3931148648262024,
+                    1
+                ],
+                "metallicFactor" : 0,
+                "roughnessFactor" : 0.5
+            }
+        },
+        {
+            "doubleSided" : true,
+            "name" : "globes",
+            "pbrMetallicRoughness" : {
+                "baseColorFactor" : [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "metallicFactor" : 0.20000000298023224,
+                "roughnessFactor" : 0.5
+            }
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Mesh.002",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TANGENT" : 2,
+                        "TEXCOORD_0" : 3
+                    },
+                    "indices" : 4,
+                    "material" : 0
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 5,
+                        "NORMAL" : 6,
+                        "TANGENT" : 7,
+                        "TEXCOORD_0" : 8
+                    },
+                    "indices" : 9,
+                    "material" : 1
+                },
+                {
+                    "attributes" : {
+                        "POSITION" : 10,
+                        "NORMAL" : 11,
+                        "TANGENT" : 12,
+                        "TEXCOORD_0" : 13
+                    },
+                    "indices" : 14,
+                    "material" : 2
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 4452,
+            "max" : [
+                1.598240613937378,
+                2.4200918674468994,
+                0.4279417097568512
+            ],
+            "min" : [
+                -1.5457961559295654,
+                -1.7952516078948975,
+                -0.9424625635147095
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 4452,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 4452,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 4452,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 20871,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 41,
+            "max" : [
+                0.39421334862709045,
+                2.253577470779419,
+                0.47318020462989807
+            ],
+            "min" : [
+                -0.3067839741706848,
+                1.6097724437713623,
+                0.25163933634757996
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5126,
+            "count" : 41,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5126,
+            "count" : 41,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 41,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5123,
+            "count" : 195,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5126,
+            "count" : 9103,
+            "max" : [
+                1.79429292678833,
+                1.6828367710113525,
+                0.4613277018070221
+            ],
+            "min" : [
+                -1.7413967847824097,
+                0.43042922019958496,
+                -0.4666483700275421
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 11,
+            "componentType" : 5126,
+            "count" : 9103,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 12,
+            "componentType" : 5126,
+            "count" : 9103,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 13,
+            "componentType" : 5126,
+            "count" : 9103,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 14,
+            "componentType" : 5123,
+            "count" : 51168,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 15,
+            "componentType" : 5126,
+            "count" : 120,
+            "max" : [
+                5
+            ],
+            "min" : [
+                0.041666666666666664
+            ],
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 16,
+            "componentType" : 5126,
+            "count" : 120,
+            "type" : "VEC3"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 53424,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 53424,
+            "byteOffset" : 53424
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 71232,
+            "byteOffset" : 106848
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 35616,
+            "byteOffset" : 178080
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 41742,
+            "byteOffset" : 213696
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 492,
+            "byteOffset" : 255440
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 492,
+            "byteOffset" : 255932
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 656,
+            "byteOffset" : 256424
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 328,
+            "byteOffset" : 257080
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 390,
+            "byteOffset" : 257408
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 109236,
+            "byteOffset" : 257800
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 109236,
+            "byteOffset" : 367036
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 145648,
+            "byteOffset" : 476272
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 72824,
+            "byteOffset" : 621920
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 102336,
+            "byteOffset" : 694744
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 480,
+            "byteOffset" : 797080
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 1440,
+            "byteOffset" : 797560
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 799000,
+            "uri" : "helmet_animate.bin"
+        }
+    ]
+}
